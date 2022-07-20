@@ -65,6 +65,8 @@
         <img class="rightArrow"  [ngStyle]="{transform:'rotate(180deg)'}" (click)=" updateLeft !== 'ready' ? false : moveBetweenThreeInArrayLoop('Right')" src="https://cdn3.iconfinder.com/data/icons/arrow-outline-8/32/left-256.png" alt="left">
     
       </div>
+      <div class="clickLeft" (click)=" updateLeft !== 'ready' ? false :  moveBetweenThreeInArrayLoop('Left')" ></div>
+      <div class="clickRight" (click)=" updateLeft !== 'ready' ? false :  moveBetweenThreeInArrayLoop('Right')" ></div>
   </div>
 
   

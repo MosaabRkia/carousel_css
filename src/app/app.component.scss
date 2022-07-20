@@ -40,6 +40,19 @@ $bigSize:300px;
     border-radius: 15px;
 }
 
+.clickLeft{
+    width: 50%;
+    position: absolute;
+    left: 0;
+    height: 100%;
+}
+.clickRight{
+    width: 50%;
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
 #hidden1{
     left:-350px;
     opacity: 0;
