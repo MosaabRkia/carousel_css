@@ -15,6 +15,7 @@
       <div class="smallCard left "
       [ngClass]="{'useAnimation_card_1_Left': updateLeft === true, 'useAnimation_card_1_Right': updateLeft === false}"
       >
+      <div class="clickLeft" (click)=" updateLeft !== 'ready' ? false :  moveBetweenThreeInArrayLoop('Left')" ></div>
         <h1 class="smallTitle">
             {{arr[sort[0]].name}}
         </h1>
@@ -40,6 +41,8 @@
       class="smallCard right" 
       [ngClass]="{'useAnimationLeftCard_3_Left': updateLeft === true, 'useAnimationLeftCard_3_Right': updateLeft === false}"
       >
+      <div class="clickRight" (click)=" updateLeft !== 'ready' ? false :  moveBetweenThreeInArrayLoop('Right')" ></div>
+
         <h1 class="smallTitle">
             {{arr[sort[2]].name}}   
 
@@ -65,8 +68,7 @@
         <img class="rightArrow"  [ngStyle]="{transform:'rotate(180deg)'}" (click)=" updateLeft !== 'ready' ? false : moveBetweenThreeInArrayLoop('Right')" src="https://cdn3.iconfinder.com/data/icons/arrow-outline-8/32/left-256.png" alt="left">
     
       </div>
-      <div class="clickLeft" (click)=" updateLeft !== 'ready' ? false :  moveBetweenThreeInArrayLoop('Left')" ></div>
-      <div class="clickRight" (click)=" updateLeft !== 'ready' ? false :  moveBetweenThreeInArrayLoop('Right')" ></div>
+      
   </div>
 
   
