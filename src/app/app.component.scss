@@ -4,6 +4,7 @@ $right : calc(100% - 282px - 30px);
 $smallSize:250px;
 $bigSize:300px;
 
+
 .smallCard{
     position: absolute;
     border: 1px solid black;
@@ -12,11 +13,10 @@ $bigSize:300px;
     border-radius: 15px;
     width: $smallSize;
     height: $smallSize;
-    background-color: red;
 
 }
 .bigCard{
-    position: absolute;
+    position: relative;
     border: 1px solid black;
     padding: 15px;
     margin: 15px;
@@ -40,15 +40,46 @@ $bigSize:300px;
     border-radius: 15px;
 }
 
+.smallWrap{
+    width: 16rem;
+    height: 15.5rem;
+    position: relative;
+    overflow: hidden;
+
+    .bigTitle{
+        font-size: 3em;
+        margin: 0;
+    }
+    .bigDesciption{
+        font-size: 1.5em;
+        margin: 0;
+    }
+
+    .smallTitle{
+        font-size: 2em;
+        margin: 0;
+    }
+
+    .smallDesciption{
+        font-size: 1em;
+    }
+
+}
+
+
 .clickLeft{
     width: 100%;
     position: absolute;
     height: 100%;
+    top: 0;
+    left: 0;
 }
 .clickRight{
     width: 100%;
     position: absolute;
     height: 100%;
+    top: 0;
+    left: 0;
 }
 
 #hidden1{
@@ -75,19 +106,16 @@ $bigSize:300px;
 }
 .left{
         left:$left;
-        background-color: red;
     }
     
     .right{
         left:$right;
-        background-color: red;
 
     }
     .center{
         left: $center;
-        background-color: red;
-
     }
+
 
 
 //! hidden 1 left side animation
@@ -117,6 +145,53 @@ $bigSize:300px;
     }
 }
 
+//! text animation big to small
+.useAnimation_text_bigToSmall_p{
+    animation-name: text_bigToSmall_p;
+    animation-duration: 3s;
+}
+@keyframes text_bigToSmall_p{
+    100%{
+          font-size: 1em;
+          margin-top: 1em;
+          margin-bottom: 1em;
+    }
+}
+
+.useAnimation_text_bigToSmall_title{
+    animation-name: text_bigToSmall_title;
+    animation-duration: 3s;
+}
+@keyframes text_bigToSmall_title{
+    100%{
+          font-size: 2em;
+    }
+}
+
+//! text animation small to big
+.useAnimation_text_smallToBig_p{
+    animation-name: text_smallToBig_p;
+    animation-duration: 3s;
+}
+@keyframes text_smallToBig_p{
+    100%{
+          font-size: 1.5em;
+          margin: 0;
+    }
+}
+
+.useAnimation_text_smallToBig_title{
+    animation-name: text_smallToBig_title;
+    animation-duration: 3s;
+}
+@keyframes text_smallToBig_title{
+    100%{
+        font-size: 3em;
+        margin: 0;
+    }
+}
+
+
 //! center animation
 .useAnimation_card_2_Left{
     animation-name: card_2_Left;
@@ -127,7 +202,7 @@ $bigSize:300px;
          left:$right;
         width: $smallSize;
         height: $smallSize;
-         display: block;
+         display: block;        
     }
 }
 .useAnimation_card_2_Right{
@@ -167,8 +242,8 @@ $bigSize:300px;
         left:$center;
         width: $bigSize;
         height: $bigSize;
-         
     }
+    
 }
 
 //! hidden 2 right side animation

@@ -4,63 +4,79 @@
       <div class="smallCard left" id="hidden1"
       [ngClass]="{'useAnimation_Hidden1_Right': updateLeft === true, 'useAnimation_Hidden1_Left': updateLeft === false}"
       >
+      <div class="smallWrap">
+
         <h1 class="smallTitle">
-            {{arr[hidden].name}}
+          {{arr[hidden].name}}
         </h1>
         <p class="smallDesciption">
-            {{arr[sort[0]].description}}
+          {{arr[hidden].description}}
         </p>
       </div>
+    </div>
 
       <div class="smallCard left "
       [ngClass]="{'useAnimation_card_1_Left': updateLeft === true, 'useAnimation_card_1_Right': updateLeft === false}"
       >
-      <div class="clickLeft" (click)=" updateLeft !== 'ready' ? false :  moveBetweenThreeInArrayLoop('Left')" ></div>
-        <h1 class="smallTitle">
-            {{arr[sort[0]].name}}
+      <div class="smallWrap">
+        <div class="clickLeft" (click)=" updateLeft !== 'ready' ? false :  moveBetweenThreeInArrayLoop('Left')" ></div>
+        <h1 class="smallTitle"  [ngClass]="{'useAnimation_text_smallToBig_title': updateLeft === true}">
+          {{arr[sort[0]].name}}
         </h1>
-        <p class="smallDesciption">
-            {{arr[sort[0]].description}}
+        <p class="smallDesciption" [ngClass]="{'useAnimation_text_smallToBig_p': updateLeft === true}">
+          {{arr[sort[0]].description}}
         </p>
+      </div>
       </div>
     
     
-      <div class="bigCard center "
+      <div class="bigCard center  "
       [ngClass]="{'useAnimation_card_2_Left': updateLeft === true, 'useAnimation_card_2_Right': updateLeft === false}"
       >
-        <h1 class="bigTitle">
+      <div class="smallWrap"
+      >
+      <h1 class="bigTitle"
+      [ngClass]="{'useAnimation_text_bigToSmall_title': updateLeft !== 'ready'}"
+      >
             {{arr[sort[1]].name}}
         </h1>
-        <p class="bigDesciption">
+        <p class="bigDesciption"
+        [ngClass]="{'useAnimation_text_bigToSmall_p': updateLeft !== 'ready'}"
+        >
             {{arr[sort[1]].description}}
         </p>
       </div>
+      </div>
+
     
     
       <div 
-      class="smallCard right" 
+      class="smallCard right " 
       [ngClass]="{'useAnimationLeftCard_3_Left': updateLeft === true, 'useAnimationLeftCard_3_Right': updateLeft === false}"
       >
       <div class="clickRight" (click)=" updateLeft !== 'ready' ? false :  moveBetweenThreeInArrayLoop('Right')" ></div>
-
-        <h1 class="smallTitle">
+      <div class="smallWrap">
+        <h1 class="smallTitle"  [ngClass]="{'useAnimation_text_smallToBig_title': updateLeft === false}">
             {{arr[sort[2]].name}}   
 
         </h1>
-        <p class="smallDesciption">
+        <p class="smallDesciption" [ngClass]="{'useAnimation_text_smallToBig_p': updateLeft === false}">
             {{arr[sort[2]].description}}
         </p>
+      </div>
       </div>
 
       <div class="smallCard hidden2"
       [ngClass]="{ 'useAnimationRight2_Hidden': updateLeft === true,'useAnimation_hidden2_Left': updateLeft === false}"
       >
+      <div class="smallWrap">
         <h1 class="smallTitle">
             {{arr[hidden].name}} 
         </h1>
         <p class="smallDesciption">
-            {{arr[sort[0]].description}}
+            {{arr[hidden].description}}
         </p>
+      </div>
       </div>
       <div class="buttons">
       

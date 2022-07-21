@@ -16,7 +16,7 @@ export class AppComponent {
 
    arr : IDiv[] = [
     {
-      id:1,name:"test1",description:"lorem porem bla bla bla 1"
+      id:1,name:"test1",description:"lorem porem bla bla bla 1lorem porem bla bla bla 1lorem porem bla bla bla 1lorem porem bla bla bla 1"
     },
     {
       id:2,name:"test2",description:"lorem porem bla bla bla 2"
