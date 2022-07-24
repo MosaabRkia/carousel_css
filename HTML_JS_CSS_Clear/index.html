@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+    <div>
+        <!-- <div    [ngStyle]="{background:'red',width:'150px',height:'150px'}"></div> -->
+        <div class="container"
+        id="bigContainer"
+        <!-- //(swipeleft)="moveBetweenThreeInArrayLoop('Right')"
+       // (swipeRight)="moveBetweenThreeInArrayLoop('Left')" -->
+
+            <div class="smallCard left" id="hidden1"
+      
+            [ngClass]="{'useAnimation_Hidden1_Right': updateLeft === true, 'useAnimation_Hidden1_Left': updateLeft === false}"
+            >
+            <div class="smallWrap">
+      
+              <h1 class="smallTitle" id="cardhidden1_title">
+                unknown
+              </h1>
+              <p class="smallDesciption" id="cardhidden1_description">
+                unknown
+              </p>
+            </div>
+          </div>
+      
+            <div class="smallCard left "
+            id="card1"
+            (click)=" updateLeft !== 'ready' ? false :  moveBetweenThreeInArrayLoop('Left')"
+            >
+            <div class="smallWrap">
+              <h1 class="smallTitle" id="card1_title" >
+                unknown
+              </h1>
+              <p class="smallDesciption" id="card1_description" [ngClass]="{'useAnimation_text_smallToBig_p': updateLeft === true}">
+                unknown
+              </p>
+            </div>
+            </div>
+          
+          
+            <div class="bigCard center"
+                id="card2"
+            [ngClass]="{'useAnimation_card_2_Left': updateLeft === true, 'useAnimation_card_2_Right': updateLeft === false}"
+            >
+            <div class="smallWrap"
+            >
+            <h1 class="bigTitle"
+            [ngClass]="{'useAnimation_text_bigToSmall_title': updateLeft !== 'ready'}"
+            id="card2_title" 
+            >
+            unknown
+              </h1>
+              <p id="card2_description" class="bigDesciption"
+              [ngClass]="{'useAnimation_text_bigToSmall_p': updateLeft !== 'ready'}"
+              >
+              unknown
+              </p>
+            </div>
+            </div>
+      
+          
+          
+            <div 
+            class="smallCard right " 
+            id="card3"
+            (click)=" updateLeft !== 'ready' ? false :  moveBetweenThreeInArrayLoop('Right')" 
+            [ngClass]="{'useAnimationLeftCard_3_Left': updateLeft === true, 'useAnimationLeftCard_3_Right': updateLeft === false}"
+            >
+            <div class="smallWrap">
+              <h1 class="smallTitle"  id="card3_title"   [ngClass]="{'useAnimation_text_smallToBig_title': updateLeft === false}">
+                unknown 
+      
+              </h1>
+              <p class="smallDesciption" id="card3_description" [ngClass]="{'useAnimation_text_smallToBig_p': updateLeft === false}">
+                unknown
+              </p>
+            </div>
+            </div>
+      
+            <div class="smallCard hidden2"
+            id="hidden2"
+            [ngClass]="{ 'useAnimationRight2_Hidden': updateLeft === true,'useAnimation_hidden2_Left': updateLeft === false}"
+            >
+            <div class="smallWrap">
+              <h1 class="smallTitle"  id="cardhidden2_title" >
+                unknown 
+              </h1>
+              <p class="smallDesciption" id="cardhidden2_description">
+                unknown
+              </p>
+            </div>
+            </div>
+            <div class="buttons">
+            
+              <img class="leftArrow" onclick="updateLeft !== 'ready' ? false :moveBetweenThreeInArrayLoop('Left')" src="https://cdn3.iconfinder.com/data/icons/arrow-outline-8/32/left-256.png" alt="left">
+              <img class="rightArrow" onclick="updateLeft !== 'ready' ? false :moveBetweenThreeInArrayLoop('Right')"  style="transform:rotate(180deg)" src="https://cdn3.iconfinder.com/data/icons/arrow-outline-8/32/left-256.png" alt="left">
+          
+            </div>
+            
+        </div>
+      
+        
+        
+      </div>
+    <script src="myscripts.js">
+    </script>
+</body>
+</html>

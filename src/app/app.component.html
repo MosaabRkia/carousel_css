@@ -1,7 +1,12 @@
 <div>
-  <div class="container">
+  <!-- <div    [ngStyle]="{background:'red',width:'150px',height:'150px'}"></div> -->
+  <div class="container"
+  (swipeleft)="moveBetweenThreeInArrayLoop('Right')"
+  (swipeRight)="moveBetweenThreeInArrayLoop('Left')"
+  >
     <!-- <h1>{{sort | json}}</h1> -->
       <div class="smallCard left" id="hidden1"
+
       [ngClass]="{'useAnimation_Hidden1_Right': updateLeft === true, 'useAnimation_Hidden1_Left': updateLeft === false}"
       >
       <div class="smallWrap">
@@ -16,10 +21,10 @@
     </div>
 
       <div class="smallCard left "
+      (click)=" updateLeft !== 'ready' ? false :  moveBetweenThreeInArrayLoop('Left')"
       [ngClass]="{'useAnimation_card_1_Left': updateLeft === true, 'useAnimation_card_1_Right': updateLeft === false}"
       >
       <div class="smallWrap">
-        <div class="clickLeft" (click)=" updateLeft !== 'ready' ? false :  moveBetweenThreeInArrayLoop('Left')" ></div>
         <h1 class="smallTitle"  [ngClass]="{'useAnimation_text_smallToBig_title': updateLeft === true}">
           {{arr[sort[0]].name}}
         </h1>
@@ -52,9 +57,9 @@
     
       <div 
       class="smallCard right " 
+      (click)=" updateLeft !== 'ready' ? false :  moveBetweenThreeInArrayLoop('Right')" 
       [ngClass]="{'useAnimationLeftCard_3_Left': updateLeft === true, 'useAnimationLeftCard_3_Right': updateLeft === false}"
       >
-      <div class="clickRight" (click)=" updateLeft !== 'ready' ? false :  moveBetweenThreeInArrayLoop('Right')" ></div>
       <div class="smallWrap">
         <h1 class="smallTitle"  [ngClass]="{'useAnimation_text_smallToBig_title': updateLeft === false}">
             {{arr[sort[2]].name}}   

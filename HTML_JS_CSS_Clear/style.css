@@ -1,0 +1,707 @@
+.smallCard {
+  position: absolute;
+  border: 1px solid black;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 15px;
+  width: 250px;
+  height: 250px;
+}
+
+.bigCard {
+  position: relative;
+  border: 1px solid black;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 15px;
+  width: 300px;
+  height: 300px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 365px;
+  margin: auto;
+  border: 1px solid black;
+  overflow-x: hidden;
+  border-radius: 15px;
+}
+
+.smallWrap {
+  width: 16rem;
+  height: 15.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.smallWrap .bigTitle {
+  font-size: 3em;
+  margin: 0;
+}
+.smallWrap .bigDesciption {
+  font-size: 1.5em;
+  margin: 0;
+}
+.smallWrap .smallTitle {
+  font-size: 2em;
+  margin: 0;
+}
+.smallWrap .smallDesciption {
+  font-size: 1em;
+}
+
+.clickLeft {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.clickRight {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#hidden1 {
+  left: -350px;
+  opacity: 0;
+}
+
+.hidden2 {
+  display: block;
+  left: 105%;
+  opacity: 0;
+}
+
+.leftArrow {
+  position: absolute;
+  left: 15%;
+  width: 50px;
+  bottom: 10px;
+}
+
+.rightArrow {
+  position: absolute;
+  right: 15%;
+  width: 50px;
+  bottom: 10px;
+}
+
+.left {
+  left: 0px;
+}
+
+.right {
+  left: calc(100% - 282px - 30px);
+}
+
+.center {
+  left: calc(50% - 332px + 150px);
+}
+
+.useAnimation_Hidden1_Left {
+  -webkit-animation-name: Hidden1_Left;
+          animation-name: Hidden1_Left;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes Hidden1_Left {
+  100% {
+    width: 250px;
+    height: 250px;
+    opacity: 0;
+  }
+}
+
+@keyframes Hidden1_Left {
+  100% {
+    width: 250px;
+    height: 250px;
+    opacity: 0;
+  }
+}
+.useAnimation_Hidden1_Right {
+  -webkit-animation-name: Hidden1_Right;
+          animation-name: Hidden1_Right;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes Hidden1_Right {
+  100% {
+    left: 0px;
+    width: 250px;
+    height: 250px;
+    opacity: 1;
+  }
+}
+
+@keyframes Hidden1_Right {
+  100% {
+    left: 0px;
+    width: 250px;
+    height: 250px;
+    opacity: 1;
+  }
+}
+.useAnimation_text_bigToSmall_p {
+  -webkit-animation-name: text_bigToSmall_p;
+          animation-name: text_bigToSmall_p;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes text_bigToSmall_p {
+  100% {
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+@keyframes text_bigToSmall_p {
+  100% {
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+.useAnimation_text_bigToSmall_title {
+  -webkit-animation-name: text_bigToSmall_title;
+          animation-name: text_bigToSmall_title;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes text_bigToSmall_title {
+  100% {
+    font-size: 2em;
+  }
+}
+
+@keyframes text_bigToSmall_title {
+  100% {
+    font-size: 2em;
+  }
+}
+.useAnimation_text_smallToBig_p {
+  -webkit-animation-name: text_smallToBig_p;
+          animation-name: text_smallToBig_p;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes text_smallToBig_p {
+  100% {
+    font-size: 1.5em;
+    margin: 0;
+  }
+}
+
+@keyframes text_smallToBig_p {
+  100% {
+    font-size: 1.5em;
+    margin: 0;
+  }
+}
+.useAnimation_text_smallToBig_title {
+  -webkit-animation-name: text_smallToBig_title;
+          animation-name: text_smallToBig_title;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes text_smallToBig_title {
+  100% {
+    font-size: 3em;
+    margin: 0;
+  }
+}
+
+@keyframes text_smallToBig_title {
+  100% {
+    font-size: 3em;
+    margin: 0;
+  }
+}
+.useAnimation_card_2_Left {
+  -webkit-animation-name: card_2_Left;
+          animation-name: card_2_Left;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes card_2_Left {
+  100% {
+    left: calc(100% - 282px - 30px);
+    width: 250px;
+    height: 250px;
+    display: block;
+  }
+}
+
+@keyframes card_2_Left {
+  100% {
+    left: calc(100% - 282px - 30px);
+    width: 250px;
+    height: 250px;
+    display: block;
+  }
+}
+.useAnimation_card_2_Right {
+  -webkit-animation-name: card_2_Right;
+          animation-name: card_2_Right;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes card_2_Right {
+  100% {
+    left: 0px;
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@keyframes card_2_Right {
+  100% {
+    left: 0px;
+    width: 250px;
+    height: 250px;
+  }
+}
+.useAnimation_card_1_Right {
+  -webkit-animation-name: card_1_Right;
+          animation-name: card_1_Right;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes card_1_Right {
+  100% {
+    left: -325px;
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@keyframes card_1_Right {
+  100% {
+    left: -325px;
+    width: 250px;
+    height: 250px;
+  }
+}
+.useAnimation_card_1_Left {
+  -webkit-animation-name: card_1_Left;
+          animation-name: card_1_Left;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes card_1_Left {
+  100% {
+    left: calc(50% - 332px + 150px);
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@keyframes card_1_Left {
+  100% {
+    left: calc(50% - 332px + 150px);
+    width: 300px;
+    height: 300px;
+  }
+}
+.useAnimation_hidden2_Left {
+  -webkit-animation-name: hidden2_Left;
+          animation-name: hidden2_Left;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes hidden2_Left {
+  100% {
+    display: block;
+    left: calc(100% - 282px - 30px);
+    width: 250px;
+    height: 250px;
+    opacity: 1;
+  }
+}
+
+@keyframes hidden2_Left {
+  100% {
+    display: block;
+    left: calc(100% - 282px - 30px);
+    width: 250px;
+    height: 250px;
+    opacity: 1;
+  }
+}
+.useAnimationLeftCard_3_Left {
+  -webkit-animation-name: Card_3_Left;
+          animation-name: Card_3_Left;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes Card_3_Left {
+  100% {
+    left: 105%;
+    width: 250px;
+    height: 250px;
+    opacity: 0;
+  }
+}
+
+@keyframes Card_3_Left {
+  100% {
+    left: 105%;
+    width: 250px;
+    height: 250px;
+    opacity: 0;
+  }
+}
+.useAnimationLeftCard_3_Right {
+  -webkit-animation-name: Card_3_Right;
+          animation-name: Card_3_Right;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes Card_3_Right {
+  100% {
+    left: calc(50% - 332px + 150px);
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@keyframes Card_3_Right {
+  100% {
+    left: calc(50% - 332px + 150px);
+    width: 300px;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .smallCard {
+    width: 180px;
+    height: 180px;
+  }
+  .right {
+    left: calc(100% - 212px - 30px);
+  }
+  .center {
+    left: calc(53.5% - 332px + 150px);
+  }
+  .bigCard {
+    width: 250px;
+    height: 250px;
+  }
+  @-webkit-keyframes Hidden1_Left {
+    100% {
+      width: 180px;
+      height: 180px;
+      opacity: 0;
+    }
+  }
+  @keyframes Hidden1_Left {
+    100% {
+      width: 180px;
+      height: 180px;
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes Hidden1_Right {
+    100% {
+      left: 0px;
+      width: 180px;
+      height: 180px;
+      opacity: 1;
+    }
+  }
+  @keyframes Hidden1_Right {
+    100% {
+      left: 0px;
+      width: 180px;
+      height: 180px;
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes card_2_Left {
+    100% {
+      left: calc(100% - 212px - 30px);
+      width: 180px;
+      height: 180px;
+      display: block;
+    }
+  }
+  @keyframes card_2_Left {
+    100% {
+      left: calc(100% - 212px - 30px);
+      width: 180px;
+      height: 180px;
+      display: block;
+    }
+  }
+  @-webkit-keyframes card_2_Right {
+    100% {
+      left: 0px;
+      width: 180px;
+      height: 180px;
+    }
+  }
+  @keyframes card_2_Right {
+    100% {
+      left: 0px;
+      width: 180px;
+      height: 180px;
+    }
+  }
+  @-webkit-keyframes card_1_Right {
+    100% {
+      left: -325px;
+      width: 180px;
+      height: 180px;
+    }
+  }
+  @keyframes card_1_Right {
+    100% {
+      left: -325px;
+      width: 180px;
+      height: 180px;
+    }
+  }
+  @-webkit-keyframes card_1_Left {
+    100% {
+      left: calc(53.5% - 332px + 150px);
+      width: 250px;
+      height: 250px;
+    }
+  }
+  @keyframes card_1_Left {
+    100% {
+      left: calc(53.5% - 332px + 150px);
+      width: 250px;
+      height: 250px;
+    }
+  }
+  @-webkit-keyframes hidden2_Left {
+    100% {
+      display: block;
+      left: calc(100% - 212px - 30px);
+      width: 180px;
+      height: 180px;
+      opacity: 1;
+    }
+  }
+  @keyframes hidden2_Left {
+    100% {
+      display: block;
+      left: calc(100% - 212px - 30px);
+      width: 180px;
+      height: 180px;
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes Card_3_Left {
+    100% {
+      left: 105%;
+      width: 180px;
+      height: 180px;
+      opacity: 0;
+    }
+  }
+  @keyframes Card_3_Left {
+    100% {
+      left: 105%;
+      width: 180px;
+      height: 180px;
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes Card_3_Right {
+    100% {
+      left: calc(53.5% - 332px + 150px);
+      width: 250px;
+      height: 250px;
+    }
+  }
+  @keyframes Card_3_Right {
+    100% {
+      left: calc(53.5% - 332px + 150px);
+      width: 250px;
+      height: 250px;
+    }
+  }
+}
+@media only screen and (max-width: 765px) {
+  .container {
+    min-width: 714px;
+  }
+  .smallCard {
+    width: 250px;
+    height: 250px;
+  }
+  .right {
+    left: calc(100% - 180px);
+  }
+  .left {
+    left: -20%;
+  }
+  .center {
+    left: calc(48.5% - 332px + 153px);
+  }
+  .bigCard {
+    width: 300px;
+    height: 300px;
+  }
+  @-webkit-keyframes Hidden1_Left {
+    100% {
+      width: 250px;
+      height: 250px;
+      opacity: 0;
+    }
+  }
+  @keyframes Hidden1_Left {
+    100% {
+      width: 250px;
+      height: 250px;
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes Hidden1_Right {
+    100% {
+      left: -20%;
+      width: 250px;
+      height: 250px;
+      opacity: 1;
+    }
+  }
+  @keyframes Hidden1_Right {
+    100% {
+      left: -20%;
+      width: 250px;
+      height: 250px;
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes card_2_Left {
+    100% {
+      left: calc(100% - 180px);
+      width: 250px;
+      height: 250px;
+      display: block;
+    }
+  }
+  @keyframes card_2_Left {
+    100% {
+      left: calc(100% - 180px);
+      width: 250px;
+      height: 250px;
+      display: block;
+    }
+  }
+  @-webkit-keyframes card_2_Right {
+    100% {
+      left: -20%;
+      width: 250px;
+      height: 250px;
+    }
+  }
+  @keyframes card_2_Right {
+    100% {
+      left: -20%;
+      width: 250px;
+      height: 250px;
+    }
+  }
+  @-webkit-keyframes card_1_Right {
+    100% {
+      left: -325px;
+      width: 250px;
+      height: 250px;
+    }
+  }
+  @keyframes card_1_Right {
+    100% {
+      left: -325px;
+      width: 250px;
+      height: 250px;
+    }
+  }
+  @-webkit-keyframes card_1_Left {
+    100% {
+      left: calc(48.5% - 332px + 153px);
+      width: 300px;
+      height: 300px;
+    }
+  }
+  @keyframes card_1_Left {
+    100% {
+      left: calc(48.5% - 332px + 153px);
+      width: 300px;
+      height: 300px;
+    }
+  }
+  @-webkit-keyframes hidden2_Left {
+    100% {
+      display: block;
+      left: calc(100% - 180px);
+      width: 250px;
+      height: 250px;
+      opacity: 1;
+    }
+  }
+  @keyframes hidden2_Left {
+    100% {
+      display: block;
+      left: calc(100% - 180px);
+      width: 250px;
+      height: 250px;
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes Card_3_Left {
+    100% {
+      left: 105%;
+      width: 250px;
+      height: 250px;
+      opacity: 0;
+    }
+  }
+  @keyframes Card_3_Left {
+    100% {
+      left: 105%;
+      width: 250px;
+      height: 250px;
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes Card_3_Right {
+    100% {
+      left: calc(48.5% - 332px + 153px);
+      width: 300px;
+      height: 300px;
+    }
+  }
+  @keyframes Card_3_Right {
+    100% {
+      left: calc(48.5% - 332px + 153px);
+      width: 300px;
+      height: 300px;
+    }
+  }
+}/*# sourceMappingURL=style.css.map */

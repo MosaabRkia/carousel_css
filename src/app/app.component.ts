@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HammerModule } from '@angular/platform-browser';
 import { timer } from 'rxjs';
 
 @Component({
@@ -13,6 +14,8 @@ export class AppComponent {
     updateLeft:any = "ready";
     sort:number[] = [0,1,2];
     hidden:number = 0;
+
+
 
    arr : IDiv[] = [
     {
@@ -47,8 +50,10 @@ export class AppComponent {
     },
   ];
 
-
+  
    moveBetweenThreeInArrayLoop(leftOrRight:string){
+
+    
      var temp = [this.sort[0],this.sort[1],this.sort[2]]; // clone the array without generic
      let newarr =[0];
          //! -----------------------------LEFT---------------------------------- 
@@ -85,10 +90,13 @@ export class AppComponent {
   setTimeout(() => {
     this.updateLeft ='ready';
     this.sort = newarr;
-}, 2900);
+}, 1400);
 }
 
+logTouchstart(i: any) {
+ console.log(i);
  
+}
 
 }
 
