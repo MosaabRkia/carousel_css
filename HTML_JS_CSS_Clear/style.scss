@@ -4,15 +4,24 @@ $right : calc(100% - 282px - 30px);
 $smallSize:250px;
 $bigSize:300px;
 
+body{
+    margin:0;
+}
+.bodyContainer{
+    width: 100%;
+}
 
 .smallCard{
     position: absolute;
     border: 1px solid black;
     padding: 15px;
     margin: 15px;
-    border-radius: 15px;
     width: $smallSize;
     height: $smallSize;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 12px 12px 2px 1px rgb(0 0 0 / 20%);
 
 }
 .bigCard{
@@ -20,24 +29,24 @@ $bigSize:300px;
     border: 1px solid black;
     padding: 15px;
     margin: 15px;
-    border-radius: 15px;
     width: $bigSize;
     height: $bigSize;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
     
 }
 .container{
     display: flex;
     justify-content: space-between;
     position: relative;
-    width: 100%;
+    width: 70%;
     height: 365px;
-    // max-width: 1013px;
-    
-    // min-width: 1000px;
     margin: auto;
-    border: 1px solid black;
+    // border: 1px solid black;
     overflow-x: hidden;
-    border-radius: 15px;
+    // border-radius: 15px;
 }
 
 .smallWrap{
@@ -90,7 +99,7 @@ $bigSize:300px;
 }
 .hidden2{
     display: block;
-    left: 105%;
+    left: 135%;
     opacity: 0;
 }
 
@@ -108,10 +117,14 @@ $bigSize:300px;
 }
 .left{
         left:$left;
+        transform: perspective(800px) rotateY(12deg);
+        opacity: 0.9;
     }
     
     .right{
         left:$right;
+        transform: perspective(800px) rotateY(-12deg);
+        opacity: 0.9;
 
     }
     .center{
@@ -143,6 +156,7 @@ $bigSize:300px;
         width: $smallSize;
         height: $smallSize;
         opacity: 1;
+        transform: perspective(800px) rotateY(12deg);
          
     }
 }
@@ -204,7 +218,9 @@ $bigSize:300px;
          left:$right;
         width: $smallSize;
         height: $smallSize;
-         display: block;        
+         display: block;   
+         transform: perspective(800px) rotateY(-12deg);
+         opacity: 0.9;      
     }
 }
 .useAnimation_card_2_Right{
@@ -216,6 +232,8 @@ $bigSize:300px;
          left:$left;
         width: $smallSize;
         height: $smallSize;
+        transform: perspective(800px) rotateY(12deg);
+        opacity: 0.9;
          
     }
 }
@@ -228,9 +246,10 @@ $bigSize:300px;
 }
 @keyframes card_1_Right{
     100%{
-        left:-325px;
+        left:-115%;
         width: $smallSize;
         height: $smallSize;
+        
 
     }
 }
@@ -244,6 +263,8 @@ $bigSize:300px;
         left:$center;
         width: $bigSize;
         height: $bigSize;
+        transform: perspective(800px) rotateY(0deg);
+        box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
     }
     
 }
@@ -260,6 +281,7 @@ $bigSize:300px;
         width: $smallSize;
         height: $smallSize;
         opacity: 1;
+        transform: perspective(800px) rotateY(-12deg);
          
     }
 }
@@ -271,7 +293,7 @@ $bigSize:300px;
 }
 @keyframes Card_3_Left{
     100%{
-        left: 105%;
+        left: 135%;
         width: $smallSize;
         height: $smallSize;
         opacity: 0;
@@ -288,14 +310,16 @@ $bigSize:300px;
         left:$center;
         width: $bigSize;
         height: $bigSize;
+        transform: perspective(800px) rotateY(0deg);
+        box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
     }
 }
 
 
-@media only screen and (max-width:950px) {
-    $right :calc(100% - 212px - 30px ) !global;     
-    $center: calc(53.5% - 332px + 150px) !global;
-    $smallSize:180px !global;
+@media only screen and (max-width:1360px) {
+    $right :calc(100% - 212px - 69px) !global;     
+    $center: calc(53.5% - 334px + 150px) !global;
+    $smallSize:220px !global;
     $bigSize:250px !global;
     
         .smallCard{
@@ -313,6 +337,10 @@ $bigSize:300px;
         .bigCard{
             width: $bigSize;
             height: $bigSize;
+        }
+
+        .smallWrap{
+            width: 14rem;
         }
 
        
@@ -340,6 +368,8 @@ $bigSize:300px;
                 width: $smallSize;
                 height: $smallSize;
                  display: block;
+                 transform: perspective(800px) rotateY(-12deg);
+                 opacity: 0.9; 
             }
         }
         
@@ -348,13 +378,14 @@ $bigSize:300px;
                  left:$left;
                 width: $smallSize;
                 height: $smallSize;
-                 
+                transform: perspective(800px) rotateY(12deg);
+                opacity: 0.9;
             }
         }
         
         @keyframes card_1_Right{
             100%{
-                left:-325px;
+                left:-115%;
                 width: $smallSize;
                 height: $smallSize;
         
@@ -367,6 +398,8 @@ $bigSize:300px;
                 left:$center;
                 width: $bigSize;
                 height: $bigSize;
+                transform: perspective(800px) rotateY(0deg);
+                box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
                  
             }
         }
@@ -378,6 +411,7 @@ $bigSize:300px;
                 width: $smallSize;
                 height: $smallSize;
                 opacity: 1;
+                transform: perspective(800px) rotateY(-12deg);
                  
             }
         }
@@ -385,7 +419,7 @@ $bigSize:300px;
         
         @keyframes Card_3_Left{
             100%{
-                left: 105%;
+                left: 135%;
                 width: $smallSize;
                 height: $smallSize;
                 opacity: 0;
@@ -398,20 +432,163 @@ $bigSize:300px;
                 left:$center;
                 width: $bigSize;
                 height: $bigSize;
+                transform: perspective(800px) rotateY(0deg);
+                box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
+            }
+        }
+}
+
+@media only screen and (max-width:1200px) {
+    $right :calc(100% - 195px - 69px) !global;     
+    $center: calc(53.5% - 334px + 150px) !global;
+    $smallSize:200px !global;
+    $bigSize:250px !global;
+    
+        .smallCard{
+            width: $smallSize;
+            height: $smallSize;
+        }
+
+        .right{
+            left:  $right;
+        }
+        .center{
+            left: $center;
+        }
+
+        .bigCard{
+            width: $bigSize;
+            height: $bigSize;
+        }
+
+        .smallWrap{
+            width: 14rem;
+        }
+
+        .container{
+            width: 75%;
+        }
+
+       
+        @keyframes Hidden1_Left{
+            100%{
+                width: $smallSize;
+                height: $smallSize;
+                opacity: 0;
+            }
+        }
+        
+        @keyframes Hidden1_Right{
+            100%{
+                 left:$left;
+                width: $smallSize;
+                height: $smallSize;
+                opacity: 1;
+                 
+            }
+        }
+        
+        @keyframes card_2_Left{
+            100%{
+                 left:$right;
+                width: $smallSize;
+                height: $smallSize;
+                 display: block;
+                 transform: perspective(800px) rotateY(-12deg);
+                 opacity: 0.9; 
+            }
+        }
+        
+        @keyframes card_2_Right{
+            100%{
+                 left:$left;
+                width: $smallSize;
+                height: $smallSize;
+                transform: perspective(800px) rotateY(12deg);
+                opacity: 0.9;
+            }
+        }
+        
+        @keyframes card_1_Right{
+            100%{
+                left:-115%;
+                width: $smallSize;
+                height: $smallSize;
+        
+            }
+        }
+        
+        
+        @keyframes card_1_Left{
+            100%{
+                left:$center;
+                width: $bigSize;
+                height: $bigSize;
+                transform: perspective(800px) rotateY(0deg);
+                box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
+                 
+            }
+        }
+        
+        @keyframes hidden2_Left{
+            100%{
+                display: block;
+                left: $right;
+                width: $smallSize;
+                height: $smallSize;
+                opacity: 1;
+
+        transform: perspective(800px) rotateY(-12deg);
+                 
+            }
+        }
+        
+        
+        @keyframes Card_3_Left{
+            100%{
+                left: 135%;
+                width: $smallSize;
+                height: $smallSize;
+                opacity: 0;
+                 
+            }
+        }
+        
+        @keyframes Card_3_Right{
+            100%{
+                left:$center;
+                width: $bigSize;
+                height: $bigSize;
+                transform: perspective(800px) rotateY(0deg);
+                box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
             }
         }
 }
 
 
-@media only screen and (max-width:765px) {
-   $smallSize : 250px;
-   $bigSize :300px;
-   $right :calc(100% - 180px ) !global;     
-   $left: -20% !global;
-   $center:calc(48.5% - 332px + 153px);
+@media only screen and (max-width:1065px) {
+    .container{
+        width:85%;
+    }
+}
+
+@media only screen and (max-width:940px) {
+    .container{
+        width:100%;
+    }
+}
+
+
+@media only screen and (max-width:800px) {
+
+    $smallSize : 250px;
+    $bigSize :300px;
+    $right :calc(100% - 209px) !global;     
+    $left: -119px !global;
+    $center:calc(48.4% - 332px + 154px);
 
     .container{
-        min-width: 714px;
+        min-width:735px;
     }
 
     .smallCard{
@@ -458,6 +635,8 @@ $bigSize:300px;
             width: $smallSize;
             height: $smallSize;
              display: block;
+             transform: perspective(800px) rotateY(-12deg);
+             opacity: 0.9; 
         }
     }
     
@@ -466,13 +645,14 @@ $bigSize:300px;
              left:$left;
             width: $smallSize;
             height: $smallSize;
-             
+            transform: perspective(800px) rotateY(12deg);
+            opacity: 0.9;
         }
     }
     
     @keyframes card_1_Right{
         100%{
-            left:-325px;
+            left:-115%;
             width: $smallSize;
             height: $smallSize;
     
@@ -485,6 +665,8 @@ $bigSize:300px;
             left:$center;
             width: $bigSize;
             height: $bigSize;
+            transform: perspective(800px) rotateY(0deg);
+            box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
              
         }
     }
@@ -496,6 +678,7 @@ $bigSize:300px;
             width: $smallSize;
             height: $smallSize;
             opacity: 1;
+        transform: perspective(800px) rotateY(-12deg);
              
         }
     }
@@ -503,7 +686,7 @@ $bigSize:300px;
     
     @keyframes Card_3_Left{
         100%{
-            left: 105%;
+            left: 135%;
             width: $smallSize;
             height: $smallSize;
             opacity: 0;
@@ -516,6 +699,8 @@ $bigSize:300px;
             left:$center;
             width: $bigSize;
             height: $bigSize;
+            transform: perspective(800px) rotateY(0deg);
+            box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
         }
     }
 }
