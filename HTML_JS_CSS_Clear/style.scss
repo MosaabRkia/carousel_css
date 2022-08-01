@@ -1,80 +1,113 @@
-$center : calc(50% - 332px + 150px);
-$left : 0px;
-$right : calc(100% - 282px - 30px);
-$smallSize:250px;
-$bigSize:300px;
+$center :  calc(50% - 237px);
+$left : 50px;
+$right : calc(100% - 444px);
+$smallSize:350px;
+$bigSize:430px;
+$bottom:250px;
 
 body{
     margin:0;
 }
 .bodyContainer{
     width: 100%;
+    height: 570px;
+    background-color: #F1F1F1;
+    overflow: hidden;
+    position: relative;
+    // min-width: 1400px;
+    min-width: 1366px;
+}
+
+.buttons{
+    position: absolute;
+    bottom: 28%;
+    left: 48%;
 }
 
 .smallCard{
     position: absolute;
-    border: 1px solid black;
+    // border: 1px solid black;
     padding: 15px;
     margin: 15px;
     width: $smallSize;
-    height: $smallSize;
+    height: calc(0.65*$smallSize);
     overflow: hidden;
     border-radius: 20px;
     cursor: pointer;
-    box-shadow: 12px 12px 2px 1px rgb(0 0 0 / 20%);
-
+    background-color: white;
+    // //box-shadow: 12px 12px 2px 1px rgb(0 0 0 / 20%);
+    // background: linear-gradient(32deg, #3f9dff, #0000003a);
+}
+#title{
+    font-size: 30px;
+    text-align: center;
+    padding: 35px;
+    font-weight: bold;
 }
 .bigCard{
     position: relative;
-    border: 1px solid black;
+    // border: 1px solid black;
     padding: 15px;
     margin: 15px;
     width: $bigSize;
-    height: $bigSize;
+    height: calc(0.65*$bigSize);
     overflow: hidden;
     border-radius: 20px;
     cursor: pointer;
-    box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
-    
+    background-color: white;
+    bottom: 0;
+    // //box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
+    // background: linear-gradient(32deg, #3f9dff, #3f9cff46);
 }
 .container{
     display: flex;
     justify-content: space-between;
     position: relative;
-    width: 70%;
-    height: 365px;
+    width: 100%;
+    height: 100%;
     margin: auto;
     // border: 1px solid black;
     overflow-x: hidden;
     // border-radius: 15px;
+    min-width: 1340px;
 }
 
 .smallWrap{
-    width: 16rem;
-    height: 15.5rem;
+    height: 100%;
     position: relative;
     overflow: hidden;
+    width: 100%;
 
     .bigTitle{
-        font-size: 3em;
+        font-size: 30px;
+        text-align: right;
         margin: 0;
+        color: #15B2B2;
+        padding: 5px;
     }
     .bigDesciption{
-        font-size: 1.5em;
+        font-size: 18px;
         margin: 0;
+    text-align: right;
+    padding: 12px;
     }
 
     .smallTitle{
-        font-size: 2em;
+        font-size: 30px;
+        text-align: right;
         margin: 0;
+        color: #15B2B2;
+        padding: 5px;
     }
 
     .smallDesciption{
-        font-size: 1em;
+        font-size: 18px;
+        margin: 0;
+    text-align: right;
+    padding: 12px;
     }
 
 }
-
 
 .clickLeft{
     width: 100%;
@@ -86,7 +119,6 @@ body{
 }
 .clickRight{
     width: 100%;
-    position: absolute;
     height: 100%;
     top: 0;
     left: 0;
@@ -96,35 +128,44 @@ body{
 #hidden1{
     left:-350px;
     opacity: 0;
+    bottom: $bottom;
 }
 .hidden2{
     display: block;
     left: 135%;
     opacity: 0;
+    bottom: $bottom;
 }
 
 .leftArrow{
-    position: absolute;
-    left: 15%;
-    width: 50px;
-    bottom: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
 }
 .rightArrow{
-    position: absolute;
-    right: 15%;
-    width: 50px;
-    bottom: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
 }
 .left{
         left:$left;
-        transform: perspective(800px) rotateY(12deg);
-        opacity: 0.9;
+        // //transform: perspective(800px) rotateY(12deg);
+        // opacity: 0.9;
+        bottom: $bottom;
+
     }
     
     .right{
         left:$right;
-        transform: perspective(800px) rotateY(-12deg);
-        opacity: 0.9;
+        // //transform: perspective(800px) rotateY(-12deg);
+        // opacity: 0.9;
+        bottom: $bottom;
 
     }
     .center{
@@ -142,8 +183,9 @@ body{
 @keyframes Hidden1_Left{
     100%{
         width: $smallSize;
-        height: $smallSize;
+        height: calc(0.65*$smallSize);
         opacity: 0;
+      
     }
 }
 .useAnimation_Hidden1_Right{
@@ -154,59 +196,11 @@ body{
     100%{
          left:$left;
         width: $smallSize;
-        height: $smallSize;
+        height: calc(0.65*$smallSize);
         opacity: 1;
-        transform: perspective(800px) rotateY(12deg);
          
     }
 }
-
-//! text animation big to small
-.useAnimation_text_bigToSmall_p{
-    animation-name: text_bigToSmall_p;
-    animation-duration: 1.5s;
-}
-@keyframes text_bigToSmall_p{
-    100%{
-          font-size: 1em;
-          margin-top: 1em;
-          margin-bottom: 1em;
-    }
-}
-
-.useAnimation_text_bigToSmall_title{
-    animation-name: text_bigToSmall_title;
-    animation-duration: 1.5s;
-}
-@keyframes text_bigToSmall_title{
-    100%{
-          font-size: 2em;
-    }
-}
-
-//! text animation small to big
-.useAnimation_text_smallToBig_p{
-    animation-name: text_smallToBig_p;
-    animation-duration: 1.5s;
-}
-@keyframes text_smallToBig_p{
-    100%{
-          font-size: 1.5em;
-          margin: 0;
-    }
-}
-
-.useAnimation_text_smallToBig_title{
-    animation-name: text_smallToBig_title;
-    animation-duration: 1.5s;
-}
-@keyframes text_smallToBig_title{
-    100%{
-        font-size: 3em;
-        margin: 0;
-    }
-}
-
 
 //! center animation
 .useAnimation_card_2_Left{
@@ -216,11 +210,10 @@ body{
 @keyframes card_2_Left{
     100%{
          left:$right;
-        width: $smallSize;
-        height: $smallSize;
-         display: block;   
-         transform: perspective(800px) rotateY(-12deg);
-         opacity: 0.9;      
+         width: $smallSize;
+         height: calc(0.65*$smallSize);
+         bottom: -33px;
+          
     }
 }
 .useAnimation_card_2_Right{
@@ -231,9 +224,8 @@ body{
     100%{
          left:$left;
         width: $smallSize;
-        height: $smallSize;
-        transform: perspective(800px) rotateY(12deg);
-        opacity: 0.9;
+        height: calc(0.65*$smallSize);
+       bottom: -32px;
          
     }
 }
@@ -248,7 +240,7 @@ body{
     100%{
         left:-115%;
         width: $smallSize;
-        height: $smallSize;
+        height: calc(0.65*$smallSize);
         
 
     }
@@ -262,9 +254,10 @@ body{
     100%{
         left:$center;
         width: $bigSize;
-        height: $bigSize;
-        transform: perspective(800px) rotateY(0deg);
-        box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
+        height: calc(0.65*$bigSize);
+        bottom: 230px;
+        //transform: perspective(800px) rotateY(0deg);
+        //box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
     }
     
 }
@@ -279,9 +272,9 @@ body{
         display: block;
         left: $right;
         width: $smallSize;
-        height: $smallSize;
+        height: calc(0.65*$smallSize);
         opacity: 1;
-        transform: perspective(800px) rotateY(-12deg);
+        //transform: perspective(800px) rotateY(-12deg);
          
     }
 }
@@ -295,7 +288,7 @@ body{
     100%{
         left: 135%;
         width: $smallSize;
-        height: $smallSize;
+        height: calc(0.65*$smallSize);
         opacity: 0;
          
     }
@@ -309,307 +302,138 @@ body{
     100%{
         left:$center;
         width: $bigSize;
-        height: $bigSize;
-        transform: perspective(800px) rotateY(0deg);
-        box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
-    }
-}
-
-
-@media only screen and (max-width:1360px) {
-    $right :calc(100% - 212px - 69px) !global;     
-    $center: calc(53.5% - 334px + 150px) !global;
-    $smallSize:220px !global;
-    $bigSize:250px !global;
-    
-        .smallCard{
-            width: $smallSize;
-            height: $smallSize;
-        }
-
-        .right{
-            left:  $right;
-        }
-        .center{
-            left: $center;
-        }
-
-        .bigCard{
-            width: $bigSize;
-            height: $bigSize;
-        }
-
-        .smallWrap{
-            width: 14rem;
-        }
-
-       
-        @keyframes Hidden1_Left{
-            100%{
-                width: $smallSize;
-                height: $smallSize;
-                opacity: 0;
-            }
-        }
-        
-        @keyframes Hidden1_Right{
-            100%{
-                 left:$left;
-                width: $smallSize;
-                height: $smallSize;
-                opacity: 1;
-                 
-            }
-        }
-        
-        @keyframes card_2_Left{
-            100%{
-                 left:$right;
-                width: $smallSize;
-                height: $smallSize;
-                 display: block;
-                 transform: perspective(800px) rotateY(-12deg);
-                 opacity: 0.9; 
-            }
-        }
-        
-        @keyframes card_2_Right{
-            100%{
-                 left:$left;
-                width: $smallSize;
-                height: $smallSize;
-                transform: perspective(800px) rotateY(12deg);
-                opacity: 0.9;
-            }
-        }
-        
-        @keyframes card_1_Right{
-            100%{
-                left:-115%;
-                width: $smallSize;
-                height: $smallSize;
-        
-            }
-        }
-        
-        
-        @keyframes card_1_Left{
-            100%{
-                left:$center;
-                width: $bigSize;
-                height: $bigSize;
-                transform: perspective(800px) rotateY(0deg);
-                box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
-                 
-            }
-        }
-        
-        @keyframes hidden2_Left{
-            100%{
-                display: block;
-                left: $right;
-                width: $smallSize;
-                height: $smallSize;
-                opacity: 1;
-                transform: perspective(800px) rotateY(-12deg);
-                 
-            }
-        }
-        
-        
-        @keyframes Card_3_Left{
-            100%{
-                left: 135%;
-                width: $smallSize;
-                height: $smallSize;
-                opacity: 0;
-                 
-            }
-        }
-        
-        @keyframes Card_3_Right{
-            100%{
-                left:$center;
-                width: $bigSize;
-                height: $bigSize;
-                transform: perspective(800px) rotateY(0deg);
-                box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
-            }
-        }
-}
-
-@media only screen and (max-width:1200px) {
-    $right :calc(100% - 195px - 69px) !global;     
-    $center: calc(53.5% - 334px + 150px) !global;
-    $smallSize:200px !global;
-    $bigSize:250px !global;
-    
-        .smallCard{
-            width: $smallSize;
-            height: $smallSize;
-        }
-
-        .right{
-            left:  $right;
-        }
-        .center{
-            left: $center;
-        }
-
-        .bigCard{
-            width: $bigSize;
-            height: $bigSize;
-        }
-
-        .smallWrap{
-            width: 14rem;
-        }
-
-        .container{
-            width: 75%;
-        }
-
-       
-        @keyframes Hidden1_Left{
-            100%{
-                width: $smallSize;
-                height: $smallSize;
-                opacity: 0;
-            }
-        }
-        
-        @keyframes Hidden1_Right{
-            100%{
-                 left:$left;
-                width: $smallSize;
-                height: $smallSize;
-                opacity: 1;
-                 
-            }
-        }
-        
-        @keyframes card_2_Left{
-            100%{
-                 left:$right;
-                width: $smallSize;
-                height: $smallSize;
-                 display: block;
-                 transform: perspective(800px) rotateY(-12deg);
-                 opacity: 0.9; 
-            }
-        }
-        
-        @keyframes card_2_Right{
-            100%{
-                 left:$left;
-                width: $smallSize;
-                height: $smallSize;
-                transform: perspective(800px) rotateY(12deg);
-                opacity: 0.9;
-            }
-        }
-        
-        @keyframes card_1_Right{
-            100%{
-                left:-115%;
-                width: $smallSize;
-                height: $smallSize;
-        
-            }
-        }
-        
-        
-        @keyframes card_1_Left{
-            100%{
-                left:$center;
-                width: $bigSize;
-                height: $bigSize;
-                transform: perspective(800px) rotateY(0deg);
-                box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
-                 
-            }
-        }
-        
-        @keyframes hidden2_Left{
-            100%{
-                display: block;
-                left: $right;
-                width: $smallSize;
-                height: $smallSize;
-                opacity: 1;
-
-        transform: perspective(800px) rotateY(-12deg);
-                 
-            }
-        }
-        
-        
-        @keyframes Card_3_Left{
-            100%{
-                left: 135%;
-                width: $smallSize;
-                height: $smallSize;
-                opacity: 0;
-                 
-            }
-        }
-        
-        @keyframes Card_3_Right{
-            100%{
-                left:$center;
-                width: $bigSize;
-                height: $bigSize;
-                transform: perspective(800px) rotateY(0deg);
-                box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
-            }
-        }
-}
-
-
-@media only screen and (max-width:1065px) {
-    .container{
-        width:85%;
-    }
-}
-
-@media only screen and (max-width:940px) {
-    .container{
-        width:100%;
+        height: calc(0.65*$bigSize);
+        bottom: 230px;
     }
 }
 
 
 @media only screen and (max-width:800px) {
 
-    $smallSize : 250px;
-    $bigSize :300px;
-    $right :calc(100% - 209px) !global;     
-    $left: -119px !global;
-    $center:calc(48.4% - 332px + 154px);
+    $center : calc(40% - 292px) !global;
+    $right : calc(100% - 194px) !global;
+    $left:-572px !global;
+    $smallSize:700px !global;
+    $bigSize:800px !global;
+
 
     .container{
-        min-width:735px;
+        // min-width: 780px;
     }
 
-    .smallCard{
-        width: $smallSize;
-        height: $smallSize;
+    #hidden1 {
+        left: -170%;
+        opacity: 0;
+        bottom: 250px;
+    }
+    #hidden2 {
+        left: 170%;
+        opacity: 0;
+        bottom: 250px;
     }
 
-    .right{
-        left:  $right;
-    }
-    .left{
-        left:$left;
-    }
-    .center{
+
+    .center {
         left: $center;
     }
 
-    .bigCard{
-        width: $bigSize;
-        height: $bigSize;
+    .right {
+        left: $right;
+        bottom: 300px;
     }
+    .left{
+        left: $left;
+        bottom: 300px;
+    }
+
+
+    .leftArrow {
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        padding: 5px;
+        margin-right: 5px;
+        position: absolute;
+        position: absolute;
+        left: -555px;
+        bottom: -82px;
+        border-radius: 5px;
+    }
+
+.rightArrow {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    padding: 5px;
+    margin-left: 5px;
+    position: absolute;
+    left: 0;
+    bottom: -115px;
+    position: absolute;
+    left: 555px;
+    bottom: -82px;
+    border-radius: 5px;
+}
+
+        .bodyContainer{
+            height: 1100px;
+        }
+
+        .bigCard {
+            width: $bigSize;
+            height: $bigSize;
+            bottom: 0;
+        }
+        .smallCard{
+            width:$smallSize;
+            height: $smallSize;
+        }
+        
+        .smallWrap .bigTitle {
+            font-size: 81px;
+            text-align: center;
+            margin: 0;
+            color: #15B2B2;
+            padding: 5px;
+        }
+
+        .smallWrap .bigDesciption {
+            margin: 0;
+            text-align: center;
+            padding: 12px;
+            font-size: 47px;
+            /* font-weight: bold; */
+        }
+
+        .smallWrap .smallTitle {
+            font-size: 81px;
+            text-align: center;
+            margin: 0;
+            color: #15B2B2;
+            padding: 5px;
+        }
+
+        .smallWrap .smallDesciption {
+            font-size: 47px;
+                        margin: 0;
+            text-align: center;
+            padding: 12px;
+            /* font-weight: bold; */
+        }
+
+        #title {
+            font-size: 99px;
+            text-align: center;
+            padding: 0;
+            font-weight: bold;
+            margin: 0;
+            min-height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
 
     @keyframes Hidden1_Left{
         100%{
@@ -625,6 +449,8 @@ body{
             width: $smallSize;
             height: $smallSize;
             opacity: 1;
+            bottom: 300px;
+           // left: -573px;
              
         }
     }
@@ -635,8 +461,8 @@ body{
             width: $smallSize;
             height: $smallSize;
              display: block;
-             transform: perspective(800px) rotateY(-12deg);
              opacity: 0.9; 
+             bottom: -40px;
         }
     }
     
@@ -645,8 +471,8 @@ body{
              left:$left;
             width: $smallSize;
             height: $smallSize;
-            transform: perspective(800px) rotateY(12deg);
             opacity: 0.9;
+            bottom: -40px;
         }
     }
     
@@ -665,8 +491,7 @@ body{
             left:$center;
             width: $bigSize;
             height: $bigSize;
-            transform: perspective(800px) rotateY(0deg);
-            box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
+            bottom: 240px;
              
         }
     }
@@ -678,7 +503,7 @@ body{
             width: $smallSize;
             height: $smallSize;
             opacity: 1;
-        transform: perspective(800px) rotateY(-12deg);
+            bottom: 300px;
              
         }
     }
@@ -698,9 +523,8 @@ body{
         100%{
             left:$center;
             width: $bigSize;
-            height: $bigSize;
-            transform: perspective(800px) rotateY(0deg);
-            box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
+            height:$bigSize;
+            bottom: 240px;
         }
     }
 }

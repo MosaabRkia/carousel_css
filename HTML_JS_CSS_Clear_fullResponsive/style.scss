@@ -1,0 +1,2427 @@
+$center: calc(50% - 309px);//calc(50% - 300px);
+$left: 0;//88px;
+$right:  calc(100% - 540px);
+$smallSize:482px;
+$bigSize:560px;
+$fontSizeTitle-32 : 2.1rem;
+$fontSizeTitleForm-22:1.5rem;
+$fontSizeSubTitleSmall-14 : 1rem;
+
+body{
+    // min-width: 1880px;
+    margin: 0;
+}
+
+.smallDesciption::-webkit-scrollbar ,.bigDesciption::-webkit-scrollbar {
+    width: 0.05em;
+    border-radius: 15px;
+}
+ 
+.smallDesciption::-webkit-scrollbar-track,.bigDesciption::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.smallDesciption::-webkit-scrollbar-thumb,.bigDesciption::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+    border-radius: 15px;
+}
+
+
+.bodyContainer {
+    direction: ltr;
+    width: 100%;
+    height: 800px;
+    background-color: #F1F1F1;
+    overflow: hidden;
+    position: relative;
+    // min-width: 1400px;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 28%;
+    left: 48%;
+}
+
+.smallCard {
+    position: absolute;
+    // border: 1px solid black;
+    padding: 15px;
+    margin: 15px;
+    width: $smallSize;
+    height: calc(0.63*$smallSize);
+    // overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0px 3px 8px #0000001A;
+}
+
+#title {
+    font-size: 3.2rem;
+    text-align: center;
+    padding: 35px;
+    font-weight: bold;
+}
+
+.bigCard {
+    position: relative;
+    // border: 1px solid black;
+    padding: 15px;
+    margin: 15px;
+    width: $bigSize;
+    height: calc(0.65*$bigSize);
+    // overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: white;
+    bottom: 0;
+    -webkit-box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+    // //box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
+    // background: linear-gradient(32deg, #3f9dff, #3f9cff46);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-top: 55px;
+    // border: 1px solid black;
+    overflow: hidden;
+    // border-radius: 15px;
+    // min-width: 1340px;
+}
+
+.smallWrap {
+    height: 100%;
+    position: relative;
+   
+ // overflow: hidden;
+    width: 100%;
+    .bigTitle {
+        font-size: $fontSizeTitle-32;
+        // font-size: 30px;
+        text-align: right;
+        margin: 0;
+        // color: lighten($colorProfileTitle, 3);
+        color: #15B2B2;
+        // top right bottom left
+        // padding: 30px 40px 18px 0px;
+        padding: 25px 40px 8px 0px;
+    }
+    .bigDesciption {
+        // font-size: 18px;
+        font-size: $fontSizeTitleForm-22;
+        margin: 0;
+        text-align: right;
+        padding: 0px 40px 0px 25px;
+        // max-height: 240px;
+        max-width: 417px;
+        float: right;
+        overflow:auto;
+        height: 240px;
+    }
+    .smallTitle {
+        // font-size: 30px;
+        font-size: $fontSizeTitle-32;
+        text-align: right;
+        margin: 0;
+        color: #15B2B2;
+        // color: lighten($colorProfileTitle, 3);
+        // top right bottom left
+        padding: 25px 40px 8px 0px;
+
+    }
+    .smallDesciption {
+        // font-size: 18px;
+        font-size: $fontSizeTitleForm-22;
+        margin: 0;
+        text-align: right;
+        padding: 0px 40px 0px 25px;
+        // max-height: 240px;
+        max-width: 417px;
+        float: right;
+        overflow:auto;
+        height: 185px;
+    }
+}
+
+.clickLeft {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.clickRight {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#hidden1 {
+    left: -350px;
+    opacity: 0;
+    bottom: 408px;
+}
+
+.hidden2 {
+    display: block;
+    left: 135%;
+    opacity: 0;
+    bottom: 408px;
+}
+
+.leftArrow {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    transform: rotate(180deg);
+}
+
+.rightArrow {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+    transform: rotate(0deg);
+}
+
+.left {
+    left: $left;
+    bottom: 408px;
+}
+
+.right {
+    left: $right;
+    // //transform: perspective(800px) rotateY(-12deg);
+    // opacity: 0.9;
+    bottom: 408px;
+}
+
+.center {
+    left: $center;
+}
+
+//! description center big to small height
+.useAnimation_center_big_to_small {
+    animation-name: center_big_to_small;
+    animation-duration: 1.5s;
+}
+
+@keyframes center_big_to_small {
+    100% {
+        height: 185px;
+        // padding-right: 12px;
+    }
+}
+
+//! description left or right  small to big height
+.useAnimation_LOrR_small_to_big {
+    animation-name: LOrR_small_to_big;
+    animation-duration: 1.5s;
+}
+
+@keyframes LOrR_small_to_big {
+    100% {
+        height: 240px;
+        // padding-right: 17px;
+    }
+}
+
+
+//! hidden 1 left side animation
+.useAnimation_Hidden1_Left {
+    animation-name: Hidden1_Left;
+    animation-duration: 1.5s;
+}
+
+@keyframes Hidden1_Left {
+    100% {
+        width: $smallSize;
+        height: calc(0.65*$smallSize);
+        opacity: 0;
+    }
+}
+
+.useAnimation_Hidden1_Right {
+    animation-name: Hidden1_Right;
+    animation-duration: 1.5s;
+}
+
+@keyframes Hidden1_Right {
+    100% {
+        left: ($left);
+        width: $smallSize;
+        height: calc(0.63*$smallSize);
+        opacity: 1;
+    }
+}
+
+//! center animation
+.useAnimation_card_2_Left {
+    animation-name: card_2_Left;
+    animation-duration: 1.5s;
+}
+
+@keyframes card_2_Left {
+    100% {
+        left: $right;
+        width: $smallSize;
+        height: calc(0.63*$smallSize);
+        bottom: -28px;
+        -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+}
+
+.useAnimation_card_2_Right {
+    animation-name: card_2_Right;
+    animation-duration: 1.5s;
+}
+
+@keyframes card_2_Right {
+    100% {
+        left: $left;
+        width: $smallSize;
+        height: calc(0.63*$smallSize);
+        bottom: -28px;
+        -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+}
+
+//! right animation
+.useAnimation_card_1_Right {
+    animation-name: card_1_Right;
+    animation-duration: 1.5s;
+}
+
+@keyframes card_1_Right {
+    100% {
+        left: -115%;
+        width: $smallSize;
+        height: calc(0.65*$smallSize);
+    }
+}
+
+.useAnimation_card_1_Left {
+    animation-name: card_1_Left;
+    animation-duration: 1.5s;
+}
+
+@keyframes card_1_Left {
+    100% {
+        left: $center;
+        width: $bigSize;
+        height: calc(0.65*$bigSize);
+        bottom: 376px;
+        // transform: translateY(1em);
+        -webkit-box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+
+        //transform: perspective(800px) rotateY(0deg);
+        //box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
+    }
+}
+
+//! hidden 2 right side animation
+.useAnimation_hidden2_Left {
+    animation-name: hidden2_Left;
+    animation-duration: 1.5s;
+}
+
+@keyframes hidden2_Left {
+    100% {
+        left: $right;
+        width: $smallSize;
+        height: calc(0.63*$smallSize);
+        opacity: 1;
+        //transform: perspective(800px) rotateY(-12deg);
+    }
+}
+
+//! Right Card number 3 animation
+.useAnimationLeftCard_3_Left {
+    animation-name: Card_3_Left;
+    animation-duration: 1.5s;
+}
+
+@keyframes Card_3_Left {
+    100% {
+        left: 135%;
+        width: $smallSize;
+        height: calc(0.65*$smallSize);
+        opacity: 0;
+    }
+}
+
+.useAnimationLeftCard_3_Right {
+    animation-name: Card_3_Right;
+    animation-duration: 1.5s;
+}
+
+@keyframes Card_3_Right {
+    100% {
+        left: $center;
+        width: $bigSize;
+        height: calc(0.65*$bigSize);
+        bottom: 376px;
+        // transform: translateY(1em);
+        -webkit-box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+    }
+}
+
+@media only screen and (max-width:1660px) {
+    $center: calc(50% - 310px) !global;
+    $right: calc(100% - 460px) !global;
+    $left: -82px !global;
+    
+    .left {
+        left: $left;
+        bottom: 408px;
+    }
+    
+    .right {
+        left: $right;
+        // //transform: perspective(800px) rotateY(-12deg);
+        // opacity: 0.9;
+        bottom: 408px;
+    }
+    
+    .center {
+        left: $center;
+    }
+    
+    //! description center big to small height
+    .useAnimation_center_big_to_small {
+        animation-name: center_big_to_small;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes center_big_to_small {
+        100% {
+            height: 185px;
+            // padding-right: 12px;
+        }
+    }
+    
+    //! description left or right  small to big height
+    .useAnimation_LOrR_small_to_big {
+        animation-name: LOrR_small_to_big;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes LOrR_small_to_big {
+        100% {
+            height: 240px;
+            // padding-right: 17px;
+        }
+    }
+    
+    
+    //! hidden 1 left side animation
+    .useAnimation_Hidden1_Left {
+        animation-name: Hidden1_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Hidden1_Left {
+        100% {
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+            opacity: 0;
+        }
+    }
+    
+    .useAnimation_Hidden1_Right {
+        animation-name: Hidden1_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Hidden1_Right {
+        100% {
+            left: ($left);
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            opacity: 1;
+        }
+    }
+    
+    //! center animation
+    .useAnimation_card_2_Left {
+        animation-name: card_2_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_2_Left {
+        100% {
+            left: $right;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            bottom: -28px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+            box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        }
+    }
+    
+    .useAnimation_card_2_Right {
+        animation-name: card_2_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_2_Right {
+        100% {
+            left: $left;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            bottom: -28px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+            box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        }
+    }
+    
+    //! right animation
+    .useAnimation_card_1_Right {
+        animation-name: card_1_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_1_Right {
+        100% {
+            left: -115%;
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+        }
+    }
+    
+    .useAnimation_card_1_Left {
+        animation-name: card_1_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_1_Left {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: calc(0.65*$bigSize);
+            bottom: 376px;
+            // transform: translateY(1em);
+            -webkit-box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+    
+            //transform: perspective(800px) rotateY(0deg);
+            //box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
+        }
+    }
+    
+    //! hidden 2 right side animation
+    .useAnimation_hidden2_Left {
+        animation-name: hidden2_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes hidden2_Left {
+        100% {
+            left: $right;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            opacity: 1;
+            //transform: perspective(800px) rotateY(-12deg);
+        }
+    }
+    
+    //! Right Card number 3 animation
+    .useAnimationLeftCard_3_Left {
+        animation-name: Card_3_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Card_3_Left {
+        100% {
+            left: 135%;
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+            opacity: 0;
+        }
+    }
+    
+    .useAnimationLeftCard_3_Right {
+        animation-name: Card_3_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Card_3_Right {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: calc(0.65*$bigSize);
+            bottom: 376px;
+            // transform: translateY(1em);
+            -webkit-box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+    }
+}
+@media only screen and (max-width:1504px) {
+    $center: calc(50% - 310px) !global;
+    $right: calc(100% - 390px) !global;
+    $left: -150px !global;
+    
+    .left {
+        left: $left;
+        bottom: 408px;
+    }
+    
+    .right {
+        left: $right;
+        // //transform: perspective(800px) rotateY(-12deg);
+        // opacity: 0.9;
+        bottom: 408px;
+    }
+    
+    .center {
+        left: $center;
+    }
+    
+    //! description center big to small height
+    .useAnimation_center_big_to_small {
+        animation-name: center_big_to_small;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes center_big_to_small {
+        100% {
+            height: 185px;
+            // padding-right: 12px;
+        }
+    }
+    
+    //! description left or right  small to big height
+    .useAnimation_LOrR_small_to_big {
+        animation-name: LOrR_small_to_big;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes LOrR_small_to_big {
+        100% {
+            height: 240px;
+            // padding-right: 17px;
+        }
+    }
+    
+    
+    //! hidden 1 left side animation
+    .useAnimation_Hidden1_Left {
+        animation-name: Hidden1_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Hidden1_Left {
+        100% {
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+            opacity: 0;
+        }
+    }
+    
+    .useAnimation_Hidden1_Right {
+        animation-name: Hidden1_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Hidden1_Right {
+        100% {
+            left: ($left);
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            opacity: 1;
+        }
+    }
+    
+    //! center animation
+    .useAnimation_card_2_Left {
+        animation-name: card_2_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_2_Left {
+        100% {
+            left: $right;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            bottom: -28px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+            box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        }
+    }
+    
+    .useAnimation_card_2_Right {
+        animation-name: card_2_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_2_Right {
+        100% {
+            left: $left;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            bottom: -28px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+            box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        }
+    }
+    
+    //! right animation
+    .useAnimation_card_1_Right {
+        animation-name: card_1_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_1_Right {
+        100% {
+            left: -115%;
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+        }
+    }
+    
+    .useAnimation_card_1_Left {
+        animation-name: card_1_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_1_Left {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: calc(0.65*$bigSize);
+            bottom: 376px;
+            // transform: translateY(1em);
+            -webkit-box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+    
+            //transform: perspective(800px) rotateY(0deg);
+            //box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
+        }
+    }
+    
+    //! hidden 2 right side animation
+    .useAnimation_hidden2_Left {
+        animation-name: hidden2_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes hidden2_Left {
+        100% {
+            left: $right;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            opacity: 1;
+            //transform: perspective(800px) rotateY(-12deg);
+        }
+    }
+    
+    //! Right Card number 3 animation
+    .useAnimationLeftCard_3_Left {
+        animation-name: Card_3_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Card_3_Left {
+        100% {
+            left: 135%;
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+            opacity: 0;
+        }
+    }
+    
+    .useAnimationLeftCard_3_Right {
+        animation-name: Card_3_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Card_3_Right {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: calc(0.65*$bigSize);
+            bottom: 376px;
+            // transform: translateY(1em);
+            -webkit-box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+    }
+}
+@media only screen and (max-width:1370px) {
+    $center: calc(50% - 310px) !global;
+    $right: calc(100% - 328px) !global;
+    $left: -215px !global;
+    
+    .left {
+        left: $left;
+        bottom: 408px;
+    }
+    
+    .right {
+        left: $right;
+        // //transform: perspective(800px) rotateY(-12deg);
+        // opacity: 0.9;
+        bottom: 408px;
+    }
+    
+    .center {
+        left: $center;
+    }
+    
+    //! description center big to small height
+    .useAnimation_center_big_to_small {
+        animation-name: center_big_to_small;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes center_big_to_small {
+        100% {
+            height: 185px;
+            // padding-right: 12px;
+        }
+    }
+    
+    //! description left or right  small to big height
+    .useAnimation_LOrR_small_to_big {
+        animation-name: LOrR_small_to_big;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes LOrR_small_to_big {
+        100% {
+            height: 240px;
+            // padding-right: 17px;
+        }
+    }
+    
+    
+    //! hidden 1 left side animation
+    .useAnimation_Hidden1_Left {
+        animation-name: Hidden1_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Hidden1_Left {
+        100% {
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+            opacity: 0;
+        }
+    }
+    
+    .useAnimation_Hidden1_Right {
+        animation-name: Hidden1_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Hidden1_Right {
+        100% {
+            left: ($left);
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            opacity: 1;
+        }
+    }
+    
+    //! center animation
+    .useAnimation_card_2_Left {
+        animation-name: card_2_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_2_Left {
+        100% {
+            left: $right;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            bottom: -28px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+            box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        }
+    }
+    
+    .useAnimation_card_2_Right {
+        animation-name: card_2_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_2_Right {
+        100% {
+            left: $left;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            bottom: -28px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+            box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        }
+    }
+    
+    //! right animation
+    .useAnimation_card_1_Right {
+        animation-name: card_1_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_1_Right {
+        100% {
+            left: -115%;
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+        }
+    }
+    
+    .useAnimation_card_1_Left {
+        animation-name: card_1_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_1_Left {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: calc(0.65*$bigSize);
+            bottom: 376px;
+            // transform: translateY(1em);
+            -webkit-box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+    
+            //transform: perspective(800px) rotateY(0deg);
+            //box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
+        }
+    }
+    
+    //! hidden 2 right side animation
+    .useAnimation_hidden2_Left {
+        animation-name: hidden2_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes hidden2_Left {
+        100% {
+            left: $right;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            opacity: 1;
+            //transform: perspective(800px) rotateY(-12deg);
+        }
+    }
+    
+    //! Right Card number 3 animation
+    .useAnimationLeftCard_3_Left {
+        animation-name: Card_3_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Card_3_Left {
+        100% {
+            left: 135%;
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+            opacity: 0;
+        }
+    }
+    
+    .useAnimationLeftCard_3_Right {
+        animation-name: Card_3_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Card_3_Right {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: calc(0.65*$bigSize);
+            bottom: 376px;
+            // transform: translateY(1em);
+            -webkit-box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+    }
+}
+@media only screen and (max-width:1250px) {
+    $center: calc(50% - 310px) !global;
+    $right: calc(100% - 272px) !global;
+    $left: -270px !global;
+    
+    .left {
+        left: $left;
+        bottom: 408px;
+    }
+    
+    .right {
+        left: $right;
+        // //transform: perspective(800px) rotateY(-12deg);
+        // opacity: 0.9;
+        bottom: 408px;
+    }
+    
+    .center {
+        left: $center;
+    }
+    
+    //! description center big to small height
+    .useAnimation_center_big_to_small {
+        animation-name: center_big_to_small;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes center_big_to_small {
+        100% {
+            height: 185px;
+            // padding-right: 12px;
+        }
+    }
+    
+    //! description left or right  small to big height
+    .useAnimation_LOrR_small_to_big {
+        animation-name: LOrR_small_to_big;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes LOrR_small_to_big {
+        100% {
+            height: 240px;
+            // padding-right: 17px;
+        }
+    }
+    
+    
+    //! hidden 1 left side animation
+    .useAnimation_Hidden1_Left {
+        animation-name: Hidden1_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Hidden1_Left {
+        100% {
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+            opacity: 0;
+        }
+    }
+    
+    .useAnimation_Hidden1_Right {
+        animation-name: Hidden1_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Hidden1_Right {
+        100% {
+            left: ($left);
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            opacity: 1;
+        }
+    }
+    
+    //! center animation
+    .useAnimation_card_2_Left {
+        animation-name: card_2_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_2_Left {
+        100% {
+            left: $right;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            bottom: -28px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+            box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        }
+    }
+    
+    .useAnimation_card_2_Right {
+        animation-name: card_2_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_2_Right {
+        100% {
+            left: $left;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            bottom: -28px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+            box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        }
+    }
+    
+    //! right animation
+    .useAnimation_card_1_Right {
+        animation-name: card_1_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_1_Right {
+        100% {
+            left: -115%;
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+        }
+    }
+    
+    .useAnimation_card_1_Left {
+        animation-name: card_1_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_1_Left {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: calc(0.65*$bigSize);
+            bottom: 376px;
+            // transform: translateY(1em);
+            -webkit-box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+    
+            //transform: perspective(800px) rotateY(0deg);
+            //box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
+        }
+    }
+    
+    //! hidden 2 right side animation
+    .useAnimation_hidden2_Left {
+        animation-name: hidden2_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes hidden2_Left {
+        100% {
+            left: $right;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            opacity: 1;
+            //transform: perspective(800px) rotateY(-12deg);
+        }
+    }
+    
+    //! Right Card number 3 animation
+    .useAnimationLeftCard_3_Left {
+        animation-name: Card_3_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Card_3_Left {
+        100% {
+            left: 135%;
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+            opacity: 0;
+        }
+    }
+    
+    .useAnimationLeftCard_3_Right {
+        animation-name: Card_3_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Card_3_Right {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: calc(0.65*$bigSize);
+            bottom: 376px;
+            // transform: translateY(1em);
+            -webkit-box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+    }
+}
+@media only screen and (max-width:1115px) {
+    $center: calc(50% - 310px) !global;
+    $right: calc(100% - 205px) !global;
+    $left: -337px !global;
+    
+    .left {
+        left: $left;
+        bottom: 408px;
+    }
+    
+    .right {
+        left: $right;
+        // //transform: perspective(800px) rotateY(-12deg);
+        // opacity: 0.9;
+        bottom: 408px;
+    }
+    
+    .center {
+        left: $center;
+    }
+    
+    //! description center big to small height
+    .useAnimation_center_big_to_small {
+        animation-name: center_big_to_small;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes center_big_to_small {
+        100% {
+            height: 185px;
+            // padding-right: 12px;
+        }
+    }
+    
+    //! description left or right  small to big height
+    .useAnimation_LOrR_small_to_big {
+        animation-name: LOrR_small_to_big;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes LOrR_small_to_big {
+        100% {
+            height: 240px;
+            // padding-right: 17px;
+        }
+    }
+    
+    
+    //! hidden 1 left side animation
+    .useAnimation_Hidden1_Left {
+        animation-name: Hidden1_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Hidden1_Left {
+        100% {
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+            opacity: 0;
+        }
+    }
+    
+    .useAnimation_Hidden1_Right {
+        animation-name: Hidden1_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Hidden1_Right {
+        100% {
+            left: ($left);
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            opacity: 1;
+        }
+    }
+    
+    //! center animation
+    .useAnimation_card_2_Left {
+        animation-name: card_2_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_2_Left {
+        100% {
+            left: $right;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            bottom: -28px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+            box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        }
+    }
+    
+    .useAnimation_card_2_Right {
+        animation-name: card_2_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_2_Right {
+        100% {
+            left: $left;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            bottom: -28px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+            box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        }
+    }
+    
+    //! right animation
+    .useAnimation_card_1_Right {
+        animation-name: card_1_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_1_Right {
+        100% {
+            left: -115%;
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+        }
+    }
+    
+    .useAnimation_card_1_Left {
+        animation-name: card_1_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_1_Left {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: calc(0.65*$bigSize);
+            bottom: 376px;
+            // transform: translateY(1em);
+            -webkit-box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+    
+            //transform: perspective(800px) rotateY(0deg);
+            //box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
+        }
+    }
+    
+    //! hidden 2 right side animation
+    .useAnimation_hidden2_Left {
+        animation-name: hidden2_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes hidden2_Left {
+        100% {
+            left: $right;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            opacity: 1;
+            //transform: perspective(800px) rotateY(-12deg);
+        }
+    }
+    
+    //! Right Card number 3 animation
+    .useAnimationLeftCard_3_Left {
+        animation-name: Card_3_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Card_3_Left {
+        100% {
+            left: 135%;
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+            opacity: 0;
+        }
+    }
+    
+    .useAnimationLeftCard_3_Right {
+        animation-name: Card_3_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Card_3_Right {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: calc(0.65*$bigSize);
+            bottom: 376px;
+            // transform: translateY(1em);
+            -webkit-box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+    }
+}
+@media only screen and (max-width:1000px) {
+    $center: calc(50% - 310px) !global;
+    $right: calc(100% - 146px) !global;
+    $left: -392px !global;
+    
+    .left {
+        left: $left;
+        bottom: 408px;
+    }
+    
+    .right {
+        left: $right;
+        // //transform: perspective(800px) rotateY(-12deg);
+        // opacity: 0.9;
+        bottom: 408px;
+    }
+    
+    .center {
+        left: $center;
+    }
+    
+    //! description center big to small height
+    .useAnimation_center_big_to_small {
+        animation-name: center_big_to_small;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes center_big_to_small {
+        100% {
+            height: 185px;
+            // padding-right: 12px;
+        }
+    }
+    
+    //! description left or right  small to big height
+    .useAnimation_LOrR_small_to_big {
+        animation-name: LOrR_small_to_big;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes LOrR_small_to_big {
+        100% {
+            height: 240px;
+            // padding-right: 17px;
+        }
+    }
+    
+    
+    //! hidden 1 left side animation
+    .useAnimation_Hidden1_Left {
+        animation-name: Hidden1_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Hidden1_Left {
+        100% {
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+            opacity: 0;
+        }
+    }
+    
+    .useAnimation_Hidden1_Right {
+        animation-name: Hidden1_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Hidden1_Right {
+        100% {
+            left: ($left);
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            opacity: 1;
+        }
+    }
+    
+    //! center animation
+    .useAnimation_card_2_Left {
+        animation-name: card_2_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_2_Left {
+        100% {
+            left: $right;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            bottom: -28px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+            box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        }
+    }
+    
+    .useAnimation_card_2_Right {
+        animation-name: card_2_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_2_Right {
+        100% {
+            left: $left;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            bottom: -28px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+            box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        }
+    }
+    
+    //! right animation
+    .useAnimation_card_1_Right {
+        animation-name: card_1_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_1_Right {
+        100% {
+            left: -115%;
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+        }
+    }
+    
+    .useAnimation_card_1_Left {
+        animation-name: card_1_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_1_Left {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: calc(0.65*$bigSize);
+            bottom: 376px;
+            // transform: translateY(1em);
+            -webkit-box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+    
+            //transform: perspective(800px) rotateY(0deg);
+            //box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
+        }
+    }
+    
+    //! hidden 2 right side animation
+    .useAnimation_hidden2_Left {
+        animation-name: hidden2_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes hidden2_Left {
+        100% {
+            left: $right;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            opacity: 1;
+            //transform: perspective(800px) rotateY(-12deg);
+        }
+    }
+    
+    //! Right Card number 3 animation
+    .useAnimationLeftCard_3_Left {
+        animation-name: Card_3_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Card_3_Left {
+        100% {
+            left: 135%;
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+            opacity: 0;
+        }
+    }
+    
+    .useAnimationLeftCard_3_Right {
+        animation-name: Card_3_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Card_3_Right {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: calc(0.65*$bigSize);
+            bottom: 376px;
+            // transform: translateY(1em);
+            -webkit-box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+    }
+}
+@media only screen and (max-width:885px) {
+    $center: calc(50% - 310px) !global;
+    $right: calc(100% - 109px) !global;
+    $left: -408px !global;
+    
+    .left {
+        left: $left;
+        bottom: 408px;
+    }
+    
+    .right {
+        left: $right;
+        // //transform: perspective(800px) rotateY(-12deg);
+        // opacity: 0.9;
+        bottom: 408px;
+    }
+    
+    .center {
+        left: $center;
+    }
+    
+    //! description center big to small height
+    .useAnimation_center_big_to_small {
+        animation-name: center_big_to_small;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes center_big_to_small {
+        100% {
+            height: 185px;
+            // padding-right: 12px;
+        }
+    }
+    
+    //! description left or right  small to big height
+    .useAnimation_LOrR_small_to_big {
+        animation-name: LOrR_small_to_big;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes LOrR_small_to_big {
+        100% {
+            height: 240px;
+            // padding-right: 17px;
+        }
+    }
+    
+    
+    //! hidden 1 left side animation
+    .useAnimation_Hidden1_Left {
+        animation-name: Hidden1_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Hidden1_Left {
+        100% {
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+            opacity: 0;
+        }
+    }
+    
+    .useAnimation_Hidden1_Right {
+        animation-name: Hidden1_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Hidden1_Right {
+        100% {
+            left: ($left);
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            opacity: 1;
+        }
+    }
+    
+    //! center animation
+    .useAnimation_card_2_Left {
+        animation-name: card_2_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_2_Left {
+        100% {
+            left: $right;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            bottom: -28px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+            box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        }
+    }
+    
+    .useAnimation_card_2_Right {
+        animation-name: card_2_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_2_Right {
+        100% {
+            left: $left;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            bottom: -28px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+            box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        }
+    }
+    
+    //! right animation
+    .useAnimation_card_1_Right {
+        animation-name: card_1_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_1_Right {
+        100% {
+            left: -115%;
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+        }
+    }
+    
+    .useAnimation_card_1_Left {
+        animation-name: card_1_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes card_1_Left {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: calc(0.65*$bigSize);
+            bottom: 376px;
+            // transform: translateY(1em);
+            -webkit-box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+    
+            //transform: perspective(800px) rotateY(0deg);
+            //box-shadow: 12px 12px 12px 1px rgb(0 0 0 / 20%);
+        }
+    }
+    
+    //! hidden 2 right side animation
+    .useAnimation_hidden2_Left {
+        animation-name: hidden2_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes hidden2_Left {
+        100% {
+            left: $right;
+            width: $smallSize;
+            height: calc(0.63*$smallSize);
+            opacity: 1;
+            //transform: perspective(800px) rotateY(-12deg);
+        }
+    }
+    
+    //! Right Card number 3 animation
+    .useAnimationLeftCard_3_Left {
+        animation-name: Card_3_Left;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Card_3_Left {
+        100% {
+            left: 135%;
+            width: $smallSize;
+            height: calc(0.65*$smallSize);
+            opacity: 0;
+        }
+    }
+    
+    .useAnimationLeftCard_3_Right {
+        animation-name: Card_3_Right;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes Card_3_Right {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: calc(0.65*$bigSize);
+            bottom: 376px;
+            // transform: translateY(1em);
+            -webkit-box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+    }
+}
+@media only screen and (max-width:800px) {
+    $center: calc(50% - 125.5px) !global;
+    $right: calc(100% - 242px) !global;
+    $left: 0px !global;
+    $smallSize: 185px !global;
+    $bigSize: 195px !global;
+
+    #caroMosab{
+        height: 390px;
+    }
+
+    html body{
+        min-width: 360px;
+    }
+
+    .container {
+        // min-width: 780px;
+        margin-top: 0;
+    }
+    #hidden1 {
+        left: -170%;
+        opacity: 0;
+        bottom: 260px;
+    }
+    #hidden2 {
+        left: 170%;
+        opacity: 0;
+        bottom: 260px;
+    }
+    .center {
+        left: $center;
+        bottom: 12px;
+        // opacity: 0;
+    }
+    .right {
+        left: $right;
+        bottom: 260px;
+    }
+    .left {
+        left: $left;
+        bottom: 260px;
+    }
+    .leftArrow {
+        position: absolute;
+        left: -171px;
+    bottom: 80px;
+    width: 20px;
+    height: 20px;
+    }
+    .rightArrow {
+        position: absolute;
+        left: 150px;
+        bottom: 80px;
+        width: 20px;
+        height: 20px;
+    }
+    .bodyContainer {
+        height: 491px;
+       // min-width: 800px;
+    }
+    .bigCard {
+        width: $bigSize;
+        height: $bigSize;
+        bottom: 13px;
+    }
+    .smallCard {
+        width: $smallSize;
+        height: $smallSize;
+    }
+    .smallWrap{
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+    .smallWrap .bigTitle {
+        font-size: 2.2rem;
+        text-align: center;
+        margin: 0;
+        color: #15B2B2;
+        padding: 5px;
+        width: 180px;
+        margin: auto;
+    }
+    .smallWrap .bigDesciption {
+        font-size: $fontSizeSubTitleSmall-14;
+        margin: 0;
+        text-align: center;
+        padding: 12px;
+        padding-top: 0;
+        width: 160px;
+        padding-right: 17px;
+
+        /* font-weight: bold; */
+    }
+    .smallWrap .smallTitle {
+        font-size: 2.2rem;
+        text-align: center;
+        margin: 0;
+        color: #15B2B2;
+        padding: 5px;
+        width: 180px;
+        margin: auto;
+    }
+    .smallWrap .smallDesciption {
+        font-size: $fontSizeSubTitleSmall-14;
+        margin: 0;
+        text-align: center;
+        padding: 12px;
+        padding-top: 0;
+        width: 160px;
+        /* font-weight: bold; */
+    }
+    #title {
+        font-size: $fontSizeTitle-32;
+        text-align: center;
+        padding: 0;
+        font-weight: bold;
+        margin: 0;
+        // min-height: 105px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 26px;
+    }
+
+    @keyframes LOrR_small_to_big {
+        100% {
+            height: 240px;
+            padding-right: 17px;
+        }
+    }
+
+    @keyframes center_big_to_small {
+        100% {
+            height: 185px;
+             padding-right: 12px;
+        }
+    }
+    
+
+    @keyframes Hidden1_Left {
+        100% {
+            width: $smallSize;
+            height: $smallSize;
+            opacity: 0;
+        }
+    }
+    @keyframes Hidden1_Right {
+        100% {
+            left: $left;
+            width: $smallSize;
+            height: $smallSize;
+            opacity: 1;
+            bottom: 260px;
+        }
+    }
+    @keyframes card_2_Left {
+        100% {
+            left: $right;
+            width: $smallSize;
+            height: $smallSize;
+            display: block;
+            opacity: 0.9;
+            bottom: 14px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        }
+    }
+    @keyframes card_2_Right {
+        100% {
+            left: $left;
+            width: $smallSize;
+            height: $smallSize;
+            opacity: 0.9;
+            bottom: 14px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        }
+    }
+    @keyframes card_1_Right {
+        100% {
+            left: -115%;
+            width: $smallSize;
+            height: $smallSize;
+        }
+    }
+    @keyframes card_1_Left {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: $bigSize;
+            bottom: 249px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+    }
+    @keyframes hidden2_Left {
+        100% {
+            display: block;
+            left: $right;
+            width: $smallSize;
+            height: $smallSize;
+            opacity: 1;
+            bottom: 260px;
+        }
+    }
+    @keyframes Card_3_Left {
+        100% {
+            left: 135%;
+            width: $smallSize;
+            height: $smallSize;
+            opacity: 0;
+        }
+    }
+    @keyframes Card_3_Right {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: $bigSize;
+            bottom: 249px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+    }
+}
+@media only screen and (max-width:690px) {
+    $center: calc(50% - 127px) !global;
+    $right: calc(100% - 164px) !global;
+    $left: -80px !global;
+    $smallSize: 185px !global;
+    $bigSize: 195px !global;
+
+
+    .container {
+        // min-width: 780px;
+        margin-top: 0;
+    }
+    #hidden1 {
+        left: -170%;
+        opacity: 0;
+        bottom: 260px;
+    }
+    #hidden2 {
+        left: 170%;
+        opacity: 0;
+        bottom: 260px;
+    }
+    .center {
+        left: $center;
+        bottom: 12px;
+        // opacity: 0;
+    }
+    .right {
+        left: $right;
+        bottom: 260px;
+    }
+    .left {
+        left: $left;
+        bottom: 260px;
+    }
+
+
+    @keyframes Hidden1_Left {
+        100% {
+            width: $smallSize;
+            height: $smallSize;
+            opacity: 0;
+        }
+    }
+    @keyframes Hidden1_Right {
+        100% {
+            left: $left;
+            width: $smallSize;
+            height: $smallSize;
+            opacity: 1;
+            bottom: 260px;
+        }
+    }
+    @keyframes card_2_Left {
+        100% {
+            left: $right;
+            width: $smallSize;
+            height: $smallSize;
+            display: block;
+            opacity: 0.9;
+            bottom: 14px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        }
+    }
+    @keyframes card_2_Right {
+        100% {
+            left: $left;
+            width: $smallSize;
+            height: $smallSize;
+            opacity: 0.9;
+            bottom: 14px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        }
+    }
+    @keyframes card_1_Right {
+        100% {
+            left: -115%;
+            width: $smallSize;
+            height: $smallSize;
+        }
+    }
+    @keyframes card_1_Left {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: $bigSize;
+            bottom: 249px;
+            -webkit-box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+    }
+    @keyframes hidden2_Left {
+        100% {
+            display: block;
+            left: $right;
+            width: $smallSize;
+            height: $smallSize;
+            opacity: 1;
+            bottom: 260px;
+        }
+    }
+    @keyframes Card_3_Left {
+        100% {
+            left: 135%;
+            width: $smallSize;
+            height: $smallSize;
+            opacity: 0;
+        }
+    }
+    @keyframes Card_3_Right {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: $bigSize;
+            bottom: 249px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+    }
+}
+@media only screen and (max-width:540px) {
+    $center: calc(50% - 126px) !global;
+    $right: calc(100% - 102px) !global;
+    $left: -140px !global;
+    $smallSize: 185px !global;
+    $bigSize: 195px !global;
+
+    html body{
+        min-width: 360px;
+    }
+
+    .container {
+        // min-width: 780px;
+        margin-top: 0;
+    }
+    #hidden1 {
+        left: -170%;
+        opacity: 0;
+        bottom: 260px;
+    }
+    #hidden2 {
+        left: 170%;
+        opacity: 0;
+        bottom: 260px;
+    }
+    .center {
+        left: $center;
+        bottom: 12px;
+        // opacity: 0;
+    }
+    .right {
+        left: $right;
+        bottom: 260px;
+    }
+    .left {
+        left: $left;
+        bottom: 260px;
+    }
+    
+    .bodyContainer {
+        height: 491px;
+       // min-width: 800px;
+    }
+    .bigCard {
+        width: $bigSize;
+        height: $bigSize;
+        bottom: 13px;
+    }
+    .smallCard {
+        width: $smallSize;
+        height: $smallSize;
+    }
+    .smallWrap .bigTitle {
+        font-size:$fontSizeTitleForm-22;
+        text-align: center;
+        margin: 0;
+        color: #15B2B2;
+        padding: 5px;
+    }
+    .smallWrap .bigDesciption {
+        margin: 0;
+        text-align: center;
+        padding: 12px;
+        font-size: $fontSizeSubTitleSmall-14;
+        /* font-weight: bold; */
+    }
+    .smallWrap .smallTitle {
+        font-size: $fontSizeTitleForm-22;
+        text-align: center;
+        margin: 0;
+        color: #15B2B2;
+        padding: 5px;
+    }
+    .smallWrap .smallDesciption {
+        font-size: $fontSizeSubTitleSmall-14;
+        margin: 0;
+        text-align: center;
+        padding: 12px;
+        /* font-weight: bold; */
+    }
+    #title {
+        font-size: $fontSizeTitle-32;
+        text-align: center;
+        padding: 0;
+        font-weight: bold;
+        margin: 0;
+        // min-height: 105px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 26px;
+    }
+    @keyframes Hidden1_Left {
+        100% {
+            width: $smallSize;
+            height: $smallSize;
+            opacity: 0;
+        }
+    }
+    @keyframes Hidden1_Right {
+        100% {
+            left: $left;
+            width: $smallSize;
+            height: $smallSize;
+            opacity: 1;
+            bottom: 260px;
+        }
+    }
+    @keyframes card_2_Left {
+        100% {
+            left: $right;
+            width: $smallSize;
+            height: $smallSize;
+            display: block;
+            opacity: 0.9;
+            bottom: 14px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        }
+    }
+    @keyframes card_2_Right {
+        100% {
+            left: $left;
+            width: $smallSize;
+            height: $smallSize;
+            opacity: 0.9;
+            bottom: 14px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        }
+    }
+    @keyframes card_1_Right {
+        100% {
+            left: -115%;
+            width: $smallSize;
+            height: $smallSize;
+        }
+    }
+    @keyframes card_1_Left {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: $bigSize;
+            bottom: 249px;
+            -webkit-box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+    }
+    @keyframes hidden2_Left {
+        100% {
+            display: block;
+            left: $right;
+            width: $smallSize;
+            height: $smallSize;
+            opacity: 1;
+            bottom: 260px;
+                }
+    }
+    @keyframes Card_3_Left {
+        100% {
+            left: 135%;
+            width: $smallSize;
+            height: $smallSize;
+            opacity: 0;
+        }
+    }
+    @keyframes Card_3_Right {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: $bigSize;
+            bottom: 249px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+    }
+}
+@media only screen and (max-width:420px) {
+    $center: calc(50% - 126px) !global;
+    $right: calc(100% - 59px) !global;
+    $left: -185px !global;
+    $smallSize: 185px !global;
+    $bigSize: 195px !global;
+
+    html body{
+        min-width: 360px;
+    }
+
+    .container {
+        margin-top: 0;
+    }
+    #hidden1 {
+        left: -170%;
+        opacity: 0;
+        bottom: 260px;
+    }
+    #hidden2 {
+        left: 170%;
+        opacity: 0;
+        bottom: 260px;
+    }
+    .center {
+        left: $center;
+        bottom: 12px;
+        // opacity: 0;
+    }
+    .right {
+        left: $right;
+        bottom: 260px;
+    }
+    .left {
+        left: $left;
+        bottom: 260px;
+    }
+
+    .bodyContainer {
+        height: 491px;
+       min-width: 360px;
+    }
+    .bigCard {
+        width: $bigSize;
+        height: $bigSize;
+        bottom: 13px;
+    }
+    .smallCard {
+        width: $smallSize;
+        height: $smallSize;
+    }
+    .smallWrap .bigTitle {
+        font-size:$fontSizeTitleForm-22;
+        text-align: center;
+        margin: 0;
+        color: #15B2B2;
+        padding: 5px;
+    }
+    .smallWrap .bigDesciption {
+        margin: 0;
+        text-align: center;
+        padding: 12px;
+        font-size: $fontSizeSubTitleSmall-14;
+        /* font-weight: bold; */
+    }
+    .smallWrap .smallTitle {
+        font-size: $fontSizeTitleForm-22;
+        text-align: center;
+        margin: 0;
+        color: #15B2B2;
+        padding: 5px;
+    }
+    .smallWrap .smallDesciption {
+        font-size: $fontSizeSubTitleSmall-14;
+        margin: 0;
+        text-align: center;
+        padding: 12px;
+        /* font-weight: bold; */
+    }
+    #title {
+        font-size: $fontSizeTitle-32;
+        text-align: center;
+        padding: 0;
+        font-weight: bold;
+        margin: 0;
+        // min-height: 105px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 26px;
+    }
+    @keyframes Hidden1_Left {
+        100% {
+            width: $smallSize;
+            height: $smallSize;
+            opacity: 0;
+        }
+    }
+    @keyframes Hidden1_Right {
+        100% {
+            left: $left;
+            width: $smallSize;
+            height: $smallSize;
+            opacity: 1;
+            bottom: 260px;
+        }
+    }
+    @keyframes card_2_Left {
+        100% {
+            left: $right;
+            width: $smallSize;
+            height: $smallSize;
+            display: block;
+            opacity: 0.9;
+            bottom: 14px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+                }
+    }
+    @keyframes card_2_Right {
+        100% {
+            left: $left;
+            width: $smallSize;
+            height: $smallSize;
+            opacity: 0.9;
+            bottom: 14px;
+            -webkit-box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+        box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+                }
+    }
+    @keyframes card_1_Right {
+        100% {
+            left: -115%;
+            width: $smallSize;
+            height: $smallSize;
+        }
+    }
+    @keyframes card_1_Left {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: $bigSize;
+            bottom: 249px;
+            -webkit-box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+    }
+    @keyframes hidden2_Left {
+        100% {
+            display: block;
+            left: $right;
+            width: $smallSize;
+            height: $smallSize;
+            opacity: 1;
+            bottom: 260px;
+        }
+    }
+    @keyframes Card_3_Left {
+        100% {
+            left: 135%;
+            width: $smallSize;
+            height: $smallSize;
+            opacity: 0;
+        }
+    }
+    @keyframes Card_3_Right {
+        100% {
+            left: $center;
+            width: $bigSize;
+            height: $bigSize;
+            bottom: 249px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+    }
+}
+
+
+
+
+

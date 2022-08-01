@@ -4,64 +4,93 @@ body {
 
 .bodyContainer {
   width: 100%;
+  height: 570px;
+  background-color: #F1F1F1;
+  overflow: hidden;
+  position: relative;
+  min-width: 1366px;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 28%;
+  left: 48%;
 }
 
 .smallCard {
   position: absolute;
-  border: 1px solid black;
   padding: 15px;
   margin: 15px;
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 227.5px;
   overflow: hidden;
   border-radius: 20px;
   cursor: pointer;
-  box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+#title {
+  font-size: 30px;
+  text-align: center;
+  padding: 35px;
+  font-weight: bold;
 }
 
 .bigCard {
   position: relative;
-  border: 1px solid black;
   padding: 15px;
   margin: 15px;
-  width: 300px;
-  height: 300px;
+  width: 430px;
+  height: 279.5px;
   overflow: hidden;
   border-radius: 20px;
   cursor: pointer;
-  box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  bottom: 0;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   position: relative;
-  width: 70%;
-  height: 365px;
+  width: 100%;
+  height: 100%;
   margin: auto;
   overflow-x: hidden;
+  min-width: 1340px;
 }
 
 .smallWrap {
-  width: 16rem;
-  height: 15.5rem;
+  height: 100%;
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 .smallWrap .bigTitle {
-  font-size: 3em;
+  font-size: 30px;
+  text-align: right;
   margin: 0;
+  color: #15B2B2;
+  padding: 5px;
 }
 .smallWrap .bigDesciption {
-  font-size: 1.5em;
+  font-size: 18px;
   margin: 0;
+  text-align: right;
+  padding: 12px;
 }
 .smallWrap .smallTitle {
-  font-size: 2em;
+  font-size: 30px;
+  text-align: right;
   margin: 0;
+  color: #15B2B2;
+  padding: 5px;
 }
 .smallWrap .smallDesciption {
-  font-size: 1em;
+  font-size: 18px;
+  margin: 0;
+  text-align: right;
+  padding: 12px;
 }
 
 .clickLeft {
@@ -75,7 +104,6 @@ body {
 
 .clickRight {
   width: 100%;
-  position: absolute;
   height: 100%;
   top: 0;
   left: 0;
@@ -85,42 +113,46 @@ body {
 #hidden1 {
   left: -350px;
   opacity: 0;
+  bottom: 250px;
 }
 
 .hidden2 {
   display: block;
   left: 135%;
   opacity: 0;
+  bottom: 250px;
 }
 
 .leftArrow {
-  position: absolute;
-  left: 15%;
-  width: 50px;
-  bottom: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  padding: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
 }
 
 .rightArrow {
-  position: absolute;
-  right: 15%;
-  width: 50px;
-  bottom: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  padding: 5px;
+  margin-left: 5px;
+  border-radius: 5px;
 }
 
 .left {
-  left: 0px;
-  transform: perspective(800px) rotateY(12deg);
-  opacity: 0.9;
+  left: 50px;
+  bottom: 250px;
 }
 
 .right {
-  left: calc(100% - 282px - 30px);
-  transform: perspective(800px) rotateY(-12deg);
-  opacity: 0.9;
+  left: calc(100% - 444px);
+  bottom: 250px;
 }
 
 .center {
-  left: calc(50% - 332px + 150px);
+  left: calc(50% - 237px);
 }
 
 .useAnimation_Hidden1_Left {
@@ -132,16 +164,16 @@ body {
 
 @-webkit-keyframes Hidden1_Left {
   100% {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 227.5px;
     opacity: 0;
   }
 }
 
 @keyframes Hidden1_Left {
   100% {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 227.5px;
     opacity: 0;
   }
 }
@@ -154,101 +186,19 @@ body {
 
 @-webkit-keyframes Hidden1_Right {
   100% {
-    left: 0px;
-    width: 250px;
-    height: 250px;
+    left: 50px;
+    width: 350px;
+    height: 227.5px;
     opacity: 1;
-    transform: perspective(800px) rotateY(12deg);
   }
 }
 
 @keyframes Hidden1_Right {
   100% {
-    left: 0px;
-    width: 250px;
-    height: 250px;
+    left: 50px;
+    width: 350px;
+    height: 227.5px;
     opacity: 1;
-    transform: perspective(800px) rotateY(12deg);
-  }
-}
-.useAnimation_text_bigToSmall_p {
-  -webkit-animation-name: text_bigToSmall_p;
-          animation-name: text_bigToSmall_p;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-}
-
-@-webkit-keyframes text_bigToSmall_p {
-  100% {
-    font-size: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-}
-
-@keyframes text_bigToSmall_p {
-  100% {
-    font-size: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-}
-.useAnimation_text_bigToSmall_title {
-  -webkit-animation-name: text_bigToSmall_title;
-          animation-name: text_bigToSmall_title;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-}
-
-@-webkit-keyframes text_bigToSmall_title {
-  100% {
-    font-size: 2em;
-  }
-}
-
-@keyframes text_bigToSmall_title {
-  100% {
-    font-size: 2em;
-  }
-}
-.useAnimation_text_smallToBig_p {
-  -webkit-animation-name: text_smallToBig_p;
-          animation-name: text_smallToBig_p;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-}
-
-@-webkit-keyframes text_smallToBig_p {
-  100% {
-    font-size: 1.5em;
-    margin: 0;
-  }
-}
-
-@keyframes text_smallToBig_p {
-  100% {
-    font-size: 1.5em;
-    margin: 0;
-  }
-}
-.useAnimation_text_smallToBig_title {
-  -webkit-animation-name: text_smallToBig_title;
-          animation-name: text_smallToBig_title;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-}
-
-@-webkit-keyframes text_smallToBig_title {
-  100% {
-    font-size: 3em;
-    margin: 0;
-  }
-}
-
-@keyframes text_smallToBig_title {
-  100% {
-    font-size: 3em;
-    margin: 0;
   }
 }
 .useAnimation_card_2_Left {
@@ -260,23 +210,19 @@ body {
 
 @-webkit-keyframes card_2_Left {
   100% {
-    left: calc(100% - 282px - 30px);
-    width: 250px;
-    height: 250px;
-    display: block;
-    transform: perspective(800px) rotateY(-12deg);
-    opacity: 0.9;
+    left: calc(100% - 444px);
+    width: 350px;
+    height: 227.5px;
+    bottom: -33px;
   }
 }
 
 @keyframes card_2_Left {
   100% {
-    left: calc(100% - 282px - 30px);
-    width: 250px;
-    height: 250px;
-    display: block;
-    transform: perspective(800px) rotateY(-12deg);
-    opacity: 0.9;
+    left: calc(100% - 444px);
+    width: 350px;
+    height: 227.5px;
+    bottom: -33px;
   }
 }
 .useAnimation_card_2_Right {
@@ -288,21 +234,19 @@ body {
 
 @-webkit-keyframes card_2_Right {
   100% {
-    left: 0px;
-    width: 250px;
-    height: 250px;
-    transform: perspective(800px) rotateY(12deg);
-    opacity: 0.9;
+    left: 50px;
+    width: 350px;
+    height: 227.5px;
+    bottom: -32px;
   }
 }
 
 @keyframes card_2_Right {
   100% {
-    left: 0px;
-    width: 250px;
-    height: 250px;
-    transform: perspective(800px) rotateY(12deg);
-    opacity: 0.9;
+    left: 50px;
+    width: 350px;
+    height: 227.5px;
+    bottom: -32px;
   }
 }
 .useAnimation_card_1_Right {
@@ -315,16 +259,16 @@ body {
 @-webkit-keyframes card_1_Right {
   100% {
     left: -115%;
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 227.5px;
   }
 }
 
 @keyframes card_1_Right {
   100% {
     left: -115%;
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 227.5px;
   }
 }
 .useAnimation_card_1_Left {
@@ -336,21 +280,19 @@ body {
 
 @-webkit-keyframes card_1_Left {
   100% {
-    left: calc(50% - 332px + 150px);
-    width: 300px;
-    height: 300px;
-    transform: perspective(800px) rotateY(0deg);
-    box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.2);
+    left: calc(50% - 237px);
+    width: 430px;
+    height: 279.5px;
+    bottom: 230px;
   }
 }
 
 @keyframes card_1_Left {
   100% {
-    left: calc(50% - 332px + 150px);
-    width: 300px;
-    height: 300px;
-    transform: perspective(800px) rotateY(0deg);
-    box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.2);
+    left: calc(50% - 237px);
+    width: 430px;
+    height: 279.5px;
+    bottom: 230px;
   }
 }
 .useAnimation_hidden2_Left {
@@ -363,22 +305,20 @@ body {
 @-webkit-keyframes hidden2_Left {
   100% {
     display: block;
-    left: calc(100% - 282px - 30px);
-    width: 250px;
-    height: 250px;
+    left: calc(100% - 444px);
+    width: 350px;
+    height: 227.5px;
     opacity: 1;
-    transform: perspective(800px) rotateY(-12deg);
   }
 }
 
 @keyframes hidden2_Left {
   100% {
     display: block;
-    left: calc(100% - 282px - 30px);
-    width: 250px;
-    height: 250px;
+    left: calc(100% - 444px);
+    width: 350px;
+    height: 227.5px;
     opacity: 1;
-    transform: perspective(800px) rotateY(-12deg);
   }
 }
 .useAnimationLeftCard_3_Left {
@@ -391,8 +331,8 @@ body {
 @-webkit-keyframes Card_3_Left {
   100% {
     left: 135%;
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 227.5px;
     opacity: 0;
   }
 }
@@ -400,8 +340,8 @@ body {
 @keyframes Card_3_Left {
   100% {
     left: 135%;
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 227.5px;
     opacity: 0;
   }
 }
@@ -414,555 +354,270 @@ body {
 
 @-webkit-keyframes Card_3_Right {
   100% {
-    left: calc(50% - 332px + 150px);
-    width: 300px;
-    height: 300px;
-    transform: perspective(800px) rotateY(0deg);
-    box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.2);
+    left: calc(50% - 237px);
+    width: 430px;
+    height: 279.5px;
+    bottom: 230px;
   }
 }
 
 @keyframes Card_3_Right {
   100% {
-    left: calc(50% - 332px + 150px);
-    width: 300px;
-    height: 300px;
-    transform: perspective(800px) rotateY(0deg);
-    box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.2);
-  }
-}
-@media only screen and (max-width: 1360px) {
-  .smallCard {
-    width: 220px;
-    height: 220px;
-  }
-  .right {
-    left: calc(100% - 212px - 69px);
-  }
-  .center {
-    left: calc(53.5% - 334px + 150px);
-  }
-  .bigCard {
-    width: 250px;
-    height: 250px;
-  }
-  .smallWrap {
-    width: 14rem;
-  }
-  @-webkit-keyframes Hidden1_Left {
-    100% {
-      width: 220px;
-      height: 220px;
-      opacity: 0;
-    }
-  }
-  @keyframes Hidden1_Left {
-    100% {
-      width: 220px;
-      height: 220px;
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes Hidden1_Right {
-    100% {
-      left: 0px;
-      width: 220px;
-      height: 220px;
-      opacity: 1;
-    }
-  }
-  @keyframes Hidden1_Right {
-    100% {
-      left: 0px;
-      width: 220px;
-      height: 220px;
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes card_2_Left {
-    100% {
-      left: calc(100% - 212px - 69px);
-      width: 220px;
-      height: 220px;
-      display: block;
-      transform: perspective(800px) rotateY(-12deg);
-      opacity: 0.9;
-    }
-  }
-  @keyframes card_2_Left {
-    100% {
-      left: calc(100% - 212px - 69px);
-      width: 220px;
-      height: 220px;
-      display: block;
-      transform: perspective(800px) rotateY(-12deg);
-      opacity: 0.9;
-    }
-  }
-  @-webkit-keyframes card_2_Right {
-    100% {
-      left: 0px;
-      width: 220px;
-      height: 220px;
-      transform: perspective(800px) rotateY(12deg);
-      opacity: 0.9;
-    }
-  }
-  @keyframes card_2_Right {
-    100% {
-      left: 0px;
-      width: 220px;
-      height: 220px;
-      transform: perspective(800px) rotateY(12deg);
-      opacity: 0.9;
-    }
-  }
-  @-webkit-keyframes card_1_Right {
-    100% {
-      left: -115%;
-      width: 220px;
-      height: 220px;
-    }
-  }
-  @keyframes card_1_Right {
-    100% {
-      left: -115%;
-      width: 220px;
-      height: 220px;
-    }
-  }
-  @-webkit-keyframes card_1_Left {
-    100% {
-      left: calc(53.5% - 334px + 150px);
-      width: 250px;
-      height: 250px;
-      transform: perspective(800px) rotateY(0deg);
-      box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.2);
-    }
-  }
-  @keyframes card_1_Left {
-    100% {
-      left: calc(53.5% - 334px + 150px);
-      width: 250px;
-      height: 250px;
-      transform: perspective(800px) rotateY(0deg);
-      box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.2);
-    }
-  }
-  @-webkit-keyframes hidden2_Left {
-    100% {
-      display: block;
-      left: calc(100% - 212px - 69px);
-      width: 220px;
-      height: 220px;
-      opacity: 1;
-      transform: perspective(800px) rotateY(-12deg);
-    }
-  }
-  @keyframes hidden2_Left {
-    100% {
-      display: block;
-      left: calc(100% - 212px - 69px);
-      width: 220px;
-      height: 220px;
-      opacity: 1;
-      transform: perspective(800px) rotateY(-12deg);
-    }
-  }
-  @-webkit-keyframes Card_3_Left {
-    100% {
-      left: 135%;
-      width: 220px;
-      height: 220px;
-      opacity: 0;
-    }
-  }
-  @keyframes Card_3_Left {
-    100% {
-      left: 135%;
-      width: 220px;
-      height: 220px;
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes Card_3_Right {
-    100% {
-      left: calc(53.5% - 334px + 150px);
-      width: 250px;
-      height: 250px;
-      transform: perspective(800px) rotateY(0deg);
-      box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.2);
-    }
-  }
-  @keyframes Card_3_Right {
-    100% {
-      left: calc(53.5% - 334px + 150px);
-      width: 250px;
-      height: 250px;
-      transform: perspective(800px) rotateY(0deg);
-      box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.2);
-    }
-  }
-}
-@media only screen and (max-width: 1200px) {
-  .smallCard {
-    width: 200px;
-    height: 200px;
-  }
-  .right {
-    left: calc(100% - 195px - 69px);
-  }
-  .center {
-    left: calc(53.5% - 334px + 150px);
-  }
-  .bigCard {
-    width: 250px;
-    height: 250px;
-  }
-  .smallWrap {
-    width: 14rem;
-  }
-  .container {
-    width: 75%;
-  }
-  @-webkit-keyframes Hidden1_Left {
-    100% {
-      width: 200px;
-      height: 200px;
-      opacity: 0;
-    }
-  }
-  @keyframes Hidden1_Left {
-    100% {
-      width: 200px;
-      height: 200px;
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes Hidden1_Right {
-    100% {
-      left: 0px;
-      width: 200px;
-      height: 200px;
-      opacity: 1;
-    }
-  }
-  @keyframes Hidden1_Right {
-    100% {
-      left: 0px;
-      width: 200px;
-      height: 200px;
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes card_2_Left {
-    100% {
-      left: calc(100% - 195px - 69px);
-      width: 200px;
-      height: 200px;
-      display: block;
-      transform: perspective(800px) rotateY(-12deg);
-      opacity: 0.9;
-    }
-  }
-  @keyframes card_2_Left {
-    100% {
-      left: calc(100% - 195px - 69px);
-      width: 200px;
-      height: 200px;
-      display: block;
-      transform: perspective(800px) rotateY(-12deg);
-      opacity: 0.9;
-    }
-  }
-  @-webkit-keyframes card_2_Right {
-    100% {
-      left: 0px;
-      width: 200px;
-      height: 200px;
-      transform: perspective(800px) rotateY(12deg);
-      opacity: 0.9;
-    }
-  }
-  @keyframes card_2_Right {
-    100% {
-      left: 0px;
-      width: 200px;
-      height: 200px;
-      transform: perspective(800px) rotateY(12deg);
-      opacity: 0.9;
-    }
-  }
-  @-webkit-keyframes card_1_Right {
-    100% {
-      left: -115%;
-      width: 200px;
-      height: 200px;
-    }
-  }
-  @keyframes card_1_Right {
-    100% {
-      left: -115%;
-      width: 200px;
-      height: 200px;
-    }
-  }
-  @-webkit-keyframes card_1_Left {
-    100% {
-      left: calc(53.5% - 334px + 150px);
-      width: 250px;
-      height: 250px;
-      transform: perspective(800px) rotateY(0deg);
-      box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.2);
-    }
-  }
-  @keyframes card_1_Left {
-    100% {
-      left: calc(53.5% - 334px + 150px);
-      width: 250px;
-      height: 250px;
-      transform: perspective(800px) rotateY(0deg);
-      box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.2);
-    }
-  }
-  @-webkit-keyframes hidden2_Left {
-    100% {
-      display: block;
-      left: calc(100% - 195px - 69px);
-      width: 200px;
-      height: 200px;
-      opacity: 1;
-      transform: perspective(800px) rotateY(-12deg);
-    }
-  }
-  @keyframes hidden2_Left {
-    100% {
-      display: block;
-      left: calc(100% - 195px - 69px);
-      width: 200px;
-      height: 200px;
-      opacity: 1;
-      transform: perspective(800px) rotateY(-12deg);
-    }
-  }
-  @-webkit-keyframes Card_3_Left {
-    100% {
-      left: 135%;
-      width: 200px;
-      height: 200px;
-      opacity: 0;
-    }
-  }
-  @keyframes Card_3_Left {
-    100% {
-      left: 135%;
-      width: 200px;
-      height: 200px;
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes Card_3_Right {
-    100% {
-      left: calc(53.5% - 334px + 150px);
-      width: 250px;
-      height: 250px;
-      transform: perspective(800px) rotateY(0deg);
-      box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.2);
-    }
-  }
-  @keyframes Card_3_Right {
-    100% {
-      left: calc(53.5% - 334px + 150px);
-      width: 250px;
-      height: 250px;
-      transform: perspective(800px) rotateY(0deg);
-      box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.2);
-    }
-  }
-}
-@media only screen and (max-width: 1065px) {
-  .container {
-    width: 85%;
-  }
-}
-@media only screen and (max-width: 940px) {
-  .container {
-    width: 100%;
+    left: calc(50% - 237px);
+    width: 430px;
+    height: 279.5px;
+    bottom: 230px;
   }
 }
 @media only screen and (max-width: 800px) {
-  .container {
-    min-width: 735px;
+  #hidden1 {
+    left: -170%;
+    opacity: 0;
+    bottom: 250px;
   }
-  .smallCard {
-    width: 250px;
-    height: 250px;
-  }
-  .right {
-    left: calc(100% - 209px);
-  }
-  .left {
-    left: -119px;
+  #hidden2 {
+    left: 170%;
+    opacity: 0;
+    bottom: 250px;
   }
   .center {
-    left: calc(48.4% - 332px + 154px);
+    left: calc(40% - 292px);
+  }
+  .right {
+    left: calc(100% - 194px);
+    bottom: 300px;
+  }
+  .left {
+    left: -572px;
+    bottom: 300px;
+  }
+  .leftArrow {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    padding: 5px;
+    margin-right: 5px;
+    position: absolute;
+    position: absolute;
+    left: -555px;
+    bottom: -82px;
+    border-radius: 5px;
+  }
+  .rightArrow {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    padding: 5px;
+    margin-left: 5px;
+    position: absolute;
+    left: 0;
+    bottom: -115px;
+    position: absolute;
+    left: 555px;
+    bottom: -82px;
+    border-radius: 5px;
+  }
+  .bodyContainer {
+    height: 1100px;
   }
   .bigCard {
-    width: 300px;
-    height: 300px;
+    width: 800px;
+    height: 800px;
+    bottom: 0;
+  }
+  .smallCard {
+    width: 700px;
+    height: 700px;
+  }
+  .smallWrap .bigTitle {
+    font-size: 81px;
+    text-align: center;
+    margin: 0;
+    color: #15B2B2;
+    padding: 5px;
+  }
+  .smallWrap .bigDesciption {
+    margin: 0;
+    text-align: center;
+    padding: 12px;
+    font-size: 47px;
+    /* font-weight: bold; */
+  }
+  .smallWrap .smallTitle {
+    font-size: 81px;
+    text-align: center;
+    margin: 0;
+    color: #15B2B2;
+    padding: 5px;
+  }
+  .smallWrap .smallDesciption {
+    font-size: 47px;
+    margin: 0;
+    text-align: center;
+    padding: 12px;
+    /* font-weight: bold; */
+  }
+  #title {
+    font-size: 99px;
+    text-align: center;
+    padding: 0;
+    font-weight: bold;
+    margin: 0;
+    min-height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   @-webkit-keyframes Hidden1_Left {
     100% {
-      width: 250px;
-      height: 250px;
+      width: 700px;
+      height: 700px;
       opacity: 0;
     }
   }
   @keyframes Hidden1_Left {
     100% {
-      width: 250px;
-      height: 250px;
+      width: 700px;
+      height: 700px;
       opacity: 0;
     }
   }
   @-webkit-keyframes Hidden1_Right {
     100% {
-      left: -119px;
-      width: 250px;
-      height: 250px;
+      left: -572px;
+      width: 700px;
+      height: 700px;
       opacity: 1;
+      bottom: 300px;
     }
   }
   @keyframes Hidden1_Right {
     100% {
-      left: -119px;
-      width: 250px;
-      height: 250px;
+      left: -572px;
+      width: 700px;
+      height: 700px;
       opacity: 1;
+      bottom: 300px;
     }
   }
   @-webkit-keyframes card_2_Left {
     100% {
-      left: calc(100% - 209px);
-      width: 250px;
-      height: 250px;
+      left: calc(100% - 194px);
+      width: 700px;
+      height: 700px;
       display: block;
-      transform: perspective(800px) rotateY(-12deg);
       opacity: 0.9;
+      bottom: -40px;
     }
   }
   @keyframes card_2_Left {
     100% {
-      left: calc(100% - 209px);
-      width: 250px;
-      height: 250px;
+      left: calc(100% - 194px);
+      width: 700px;
+      height: 700px;
       display: block;
-      transform: perspective(800px) rotateY(-12deg);
       opacity: 0.9;
+      bottom: -40px;
     }
   }
   @-webkit-keyframes card_2_Right {
     100% {
-      left: -119px;
-      width: 250px;
-      height: 250px;
-      transform: perspective(800px) rotateY(12deg);
+      left: -572px;
+      width: 700px;
+      height: 700px;
       opacity: 0.9;
+      bottom: -40px;
     }
   }
   @keyframes card_2_Right {
     100% {
-      left: -119px;
-      width: 250px;
-      height: 250px;
-      transform: perspective(800px) rotateY(12deg);
+      left: -572px;
+      width: 700px;
+      height: 700px;
       opacity: 0.9;
+      bottom: -40px;
     }
   }
   @-webkit-keyframes card_1_Right {
     100% {
       left: -115%;
-      width: 250px;
-      height: 250px;
+      width: 700px;
+      height: 700px;
     }
   }
   @keyframes card_1_Right {
     100% {
       left: -115%;
-      width: 250px;
-      height: 250px;
+      width: 700px;
+      height: 700px;
     }
   }
   @-webkit-keyframes card_1_Left {
     100% {
-      left: calc(48.4% - 332px + 154px);
-      width: 300px;
-      height: 300px;
-      transform: perspective(800px) rotateY(0deg);
-      box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.2);
+      left: calc(40% - 292px);
+      width: 800px;
+      height: 800px;
+      bottom: 240px;
     }
   }
   @keyframes card_1_Left {
     100% {
-      left: calc(48.4% - 332px + 154px);
-      width: 300px;
-      height: 300px;
-      transform: perspective(800px) rotateY(0deg);
-      box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.2);
+      left: calc(40% - 292px);
+      width: 800px;
+      height: 800px;
+      bottom: 240px;
     }
   }
   @-webkit-keyframes hidden2_Left {
     100% {
       display: block;
-      left: calc(100% - 209px);
-      width: 250px;
-      height: 250px;
+      left: calc(100% - 194px);
+      width: 700px;
+      height: 700px;
       opacity: 1;
-      transform: perspective(800px) rotateY(-12deg);
+      bottom: 300px;
     }
   }
   @keyframes hidden2_Left {
     100% {
       display: block;
-      left: calc(100% - 209px);
-      width: 250px;
-      height: 250px;
+      left: calc(100% - 194px);
+      width: 700px;
+      height: 700px;
       opacity: 1;
-      transform: perspective(800px) rotateY(-12deg);
+      bottom: 300px;
     }
   }
   @-webkit-keyframes Card_3_Left {
     100% {
       left: 135%;
-      width: 250px;
-      height: 250px;
+      width: 700px;
+      height: 700px;
       opacity: 0;
     }
   }
   @keyframes Card_3_Left {
     100% {
       left: 135%;
-      width: 250px;
-      height: 250px;
+      width: 700px;
+      height: 700px;
       opacity: 0;
     }
   }
   @-webkit-keyframes Card_3_Right {
     100% {
-      left: calc(48.4% - 332px + 154px);
-      width: 300px;
-      height: 300px;
-      transform: perspective(800px) rotateY(0deg);
-      box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.2);
+      left: calc(40% - 292px);
+      width: 800px;
+      height: 800px;
+      bottom: 240px;
     }
   }
   @keyframes Card_3_Right {
     100% {
-      left: calc(48.4% - 332px + 154px);
-      width: 300px;
-      height: 300px;
-      transform: perspective(800px) rotateY(0deg);
-      box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.2);
+      left: calc(40% - 292px);
+      width: 800px;
+      height: 800px;
+      bottom: 240px;
     }
   }
 }/*# sourceMappingURL=style.css.map */

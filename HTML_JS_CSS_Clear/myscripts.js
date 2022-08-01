@@ -1,34 +1,15 @@
 const arr = [
     {
-      id:1,name:"test1",description:"lorem porem bla bla bla 1lorem porem bla bla bla 1lorem porem bla bla bla 1lorem porem bla bla bla 1"
+      id:1,name:"שם הפרופיל - לורם איפסום",description:" לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, קונסקטורר למחרא אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסיי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה שלי סטום, לפריקך תצטריק לרטי."
     },
     {
-      id:2,name:"test2",description:"lorem porem bla bla bla 2"
+      id:2,name:"שם הפרופיל - לורם איפסום",description:" לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, קונסקטורר למחרא אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסיי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה שלי סטום, לפריקך תצטריק לרטי."
     },
     {
-      id:3,name:"test3",description:"lorem porem bla bla bla 3"
+      id:3,name:"שם הפרופיל - לורם איפסום",description:" לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, קונסקטורר למחרא אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסיי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה שלי סטום, לפריקך תצטריק לרטי."
     },
-    {
-      id:4,name:"test4",description:"lorem porem bla bla bla 3"
-    },
-    {
-      id:5,name:"test5",description:"lorem porem bla bla bla 3"
-    },
-    {
-      id:6,name:"test6",description:"lorem porem bla bla bla 3"
-    },
-    {
-      id:7,name:"test7",description:"lorem porem bla bla bla 3"
-    },
-    {
-      id:8,name:"test8",description:"lorem porem bla bla bla 3"
-    },
-    {
-      id:9,name:"test9",description:"lorem porem bla bla bla 3"
-    },
-    {
-      id:10,name:"test10",description:"lorem porem bla bla bla 3"
-    },
+
+   
     ];
 
 
@@ -38,8 +19,8 @@ let touchstartX = 0
 let touchendX = 0
     
 function checkDirection() {
-  if (touchendX < touchstartX) moveBetweenThreeInArrayLoop('Right')
-  if (touchendX > touchstartX) moveBetweenThreeInArrayLoop('Left')
+  if (touchendX < touchstartX && touchstartX - touchendX > 130) moveBetweenThreeInArrayLoop('Right')
+  if (touchendX > touchstartX && touchstartX - touchendX < -130) moveBetweenThreeInArrayLoop('Left')
 }
 
 container.addEventListener('touchstart', e => {
@@ -140,14 +121,13 @@ updateData();
 
 function moveBetweenThreeInArrayLoop(leftOrRight){
     let newarr =[0];
-    console.log(leftOrRight);
 
     //animation
     
     
    
     var temp = [sort[0],sort[1], sort[2]]; // clone the array without generic
-    console.log(temp);
+
         //! -----------------------------LEFT---------------------------------- 
    if(leftOrRight === "Left")
    {
@@ -182,7 +162,7 @@ function moveBetweenThreeInArrayLoop(leftOrRight){
     cardHidden1_title.textContent = arr[hidden].name;
     cardHidden2_title.textContent = arr[hidden].name;
 
- console.log(newarr,hidden);
+ 
  animationMoves(leftOrRight === "Left");
 
 
@@ -191,7 +171,7 @@ function moveBetweenThreeInArrayLoop(leftOrRight){
  sort = newarr;
  updateData();
 }, 1400);
-    console.log(newarr);
+
     
 }
 

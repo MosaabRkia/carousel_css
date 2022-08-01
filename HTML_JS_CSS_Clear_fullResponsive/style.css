@@ -1,0 +1,3133 @@
+body {
+  margin: 0;
+}
+
+.smallDesciption::-webkit-scrollbar, .bigDesciption::-webkit-scrollbar {
+  width: 0.05em;
+  border-radius: 15px;
+}
+
+.smallDesciption::-webkit-scrollbar-track, .bigDesciption::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.smallDesciption::-webkit-scrollbar-thumb, .bigDesciption::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 15px;
+}
+
+.bodyContainer {
+  direction: ltr;
+  width: 100%;
+  height: 800px;
+  background-color: #F1F1F1;
+  overflow: hidden;
+  position: relative;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 28%;
+  left: 48%;
+}
+
+.smallCard {
+  position: absolute;
+  padding: 15px;
+  margin: 15px;
+  width: 482px;
+  height: 303.66px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1019607843);
+}
+
+#title {
+  font-size: 3.2rem;
+  text-align: center;
+  padding: 35px;
+  font-weight: bold;
+}
+
+.bigCard {
+  position: relative;
+  padding: 15px;
+  margin: 15px;
+  width: 560px;
+  height: 364px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: white;
+  bottom: 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  margin-top: 55px;
+  overflow: hidden;
+}
+
+.smallWrap {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+.smallWrap .bigTitle {
+  font-size: 2.1rem;
+  text-align: right;
+  margin: 0;
+  color: #15B2B2;
+  padding: 25px 40px 8px 0px;
+}
+.smallWrap .bigDesciption {
+  font-size: 1.5rem;
+  margin: 0;
+  text-align: right;
+  padding: 0px 40px 0px 25px;
+  max-width: 417px;
+  float: right;
+  overflow: auto;
+  height: 240px;
+}
+.smallWrap .smallTitle {
+  font-size: 2.1rem;
+  text-align: right;
+  margin: 0;
+  color: #15B2B2;
+  padding: 25px 40px 8px 0px;
+}
+.smallWrap .smallDesciption {
+  font-size: 1.5rem;
+  margin: 0;
+  text-align: right;
+  padding: 0px 40px 0px 25px;
+  max-width: 417px;
+  float: right;
+  overflow: auto;
+  height: 185px;
+}
+
+.clickLeft {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.clickRight {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#hidden1 {
+  left: -350px;
+  opacity: 0;
+  bottom: 408px;
+}
+
+.hidden2 {
+  display: block;
+  left: 135%;
+  opacity: 0;
+  bottom: 408px;
+}
+
+.leftArrow {
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  padding: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  transform: rotate(180deg);
+}
+
+.rightArrow {
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  padding: 5px;
+  margin-left: 5px;
+  border-radius: 5px;
+  transform: rotate(0deg);
+}
+
+.left {
+  left: 0;
+  bottom: 408px;
+}
+
+.right {
+  left: calc(100% - 540px);
+  bottom: 408px;
+}
+
+.center {
+  left: calc(50% - 309px);
+}
+
+.useAnimation_center_big_to_small {
+  -webkit-animation-name: center_big_to_small;
+          animation-name: center_big_to_small;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes center_big_to_small {
+  100% {
+    height: 185px;
+  }
+}
+
+@keyframes center_big_to_small {
+  100% {
+    height: 185px;
+  }
+}
+.useAnimation_LOrR_small_to_big {
+  -webkit-animation-name: LOrR_small_to_big;
+          animation-name: LOrR_small_to_big;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes LOrR_small_to_big {
+  100% {
+    height: 240px;
+  }
+}
+
+@keyframes LOrR_small_to_big {
+  100% {
+    height: 240px;
+  }
+}
+.useAnimation_Hidden1_Left {
+  -webkit-animation-name: Hidden1_Left;
+          animation-name: Hidden1_Left;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes Hidden1_Left {
+  100% {
+    width: 482px;
+    height: 313.3px;
+    opacity: 0;
+  }
+}
+
+@keyframes Hidden1_Left {
+  100% {
+    width: 482px;
+    height: 313.3px;
+    opacity: 0;
+  }
+}
+.useAnimation_Hidden1_Right {
+  -webkit-animation-name: Hidden1_Right;
+          animation-name: Hidden1_Right;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes Hidden1_Right {
+  100% {
+    left: 0;
+    width: 482px;
+    height: 303.66px;
+    opacity: 1;
+  }
+}
+
+@keyframes Hidden1_Right {
+  100% {
+    left: 0;
+    width: 482px;
+    height: 303.66px;
+    opacity: 1;
+  }
+}
+.useAnimation_card_2_Left {
+  -webkit-animation-name: card_2_Left;
+          animation-name: card_2_Left;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes card_2_Left {
+  100% {
+    left: calc(100% - 540px);
+    width: 482px;
+    height: 303.66px;
+    bottom: -28px;
+    box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes card_2_Left {
+  100% {
+    left: calc(100% - 540px);
+    width: 482px;
+    height: 303.66px;
+    bottom: -28px;
+    box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+  }
+}
+.useAnimation_card_2_Right {
+  -webkit-animation-name: card_2_Right;
+          animation-name: card_2_Right;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes card_2_Right {
+  100% {
+    left: 0;
+    width: 482px;
+    height: 303.66px;
+    bottom: -28px;
+    box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes card_2_Right {
+  100% {
+    left: 0;
+    width: 482px;
+    height: 303.66px;
+    bottom: -28px;
+    box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+  }
+}
+.useAnimation_card_1_Right {
+  -webkit-animation-name: card_1_Right;
+          animation-name: card_1_Right;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes card_1_Right {
+  100% {
+    left: -115%;
+    width: 482px;
+    height: 313.3px;
+  }
+}
+
+@keyframes card_1_Right {
+  100% {
+    left: -115%;
+    width: 482px;
+    height: 313.3px;
+  }
+}
+.useAnimation_card_1_Left {
+  -webkit-animation-name: card_1_Left;
+          animation-name: card_1_Left;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes card_1_Left {
+  100% {
+    left: calc(50% - 309px);
+    width: 560px;
+    height: 364px;
+    bottom: 376px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+}
+
+@keyframes card_1_Left {
+  100% {
+    left: calc(50% - 309px);
+    width: 560px;
+    height: 364px;
+    bottom: 376px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+}
+.useAnimation_hidden2_Left {
+  -webkit-animation-name: hidden2_Left;
+          animation-name: hidden2_Left;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes hidden2_Left {
+  100% {
+    left: calc(100% - 540px);
+    width: 482px;
+    height: 303.66px;
+    opacity: 1;
+  }
+}
+
+@keyframes hidden2_Left {
+  100% {
+    left: calc(100% - 540px);
+    width: 482px;
+    height: 303.66px;
+    opacity: 1;
+  }
+}
+.useAnimationLeftCard_3_Left {
+  -webkit-animation-name: Card_3_Left;
+          animation-name: Card_3_Left;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes Card_3_Left {
+  100% {
+    left: 135%;
+    width: 482px;
+    height: 313.3px;
+    opacity: 0;
+  }
+}
+
+@keyframes Card_3_Left {
+  100% {
+    left: 135%;
+    width: 482px;
+    height: 313.3px;
+    opacity: 0;
+  }
+}
+.useAnimationLeftCard_3_Right {
+  -webkit-animation-name: Card_3_Right;
+          animation-name: Card_3_Right;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes Card_3_Right {
+  100% {
+    left: calc(50% - 309px);
+    width: 560px;
+    height: 364px;
+    bottom: 376px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+}
+
+@keyframes Card_3_Right {
+  100% {
+    left: calc(50% - 309px);
+    width: 560px;
+    height: 364px;
+    bottom: 376px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+}
+@media only screen and (max-width: 1660px) {
+  .left {
+    left: -82px;
+    bottom: 408px;
+  }
+  .right {
+    left: calc(100% - 460px);
+    bottom: 408px;
+  }
+  .center {
+    left: calc(50% - 310px);
+  }
+  .useAnimation_center_big_to_small {
+    -webkit-animation-name: center_big_to_small;
+            animation-name: center_big_to_small;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes center_big_to_small {
+    100% {
+      height: 185px;
+    }
+  }
+  @keyframes center_big_to_small {
+    100% {
+      height: 185px;
+    }
+  }
+  .useAnimation_LOrR_small_to_big {
+    -webkit-animation-name: LOrR_small_to_big;
+            animation-name: LOrR_small_to_big;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes LOrR_small_to_big {
+    100% {
+      height: 240px;
+    }
+  }
+  @keyframes LOrR_small_to_big {
+    100% {
+      height: 240px;
+    }
+  }
+  .useAnimation_Hidden1_Left {
+    -webkit-animation-name: Hidden1_Left;
+            animation-name: Hidden1_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Hidden1_Left {
+    100% {
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  @keyframes Hidden1_Left {
+    100% {
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  .useAnimation_Hidden1_Right {
+    -webkit-animation-name: Hidden1_Right;
+            animation-name: Hidden1_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Hidden1_Right {
+    100% {
+      left: -82px;
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  @keyframes Hidden1_Right {
+    100% {
+      left: -82px;
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  .useAnimation_card_2_Left {
+    -webkit-animation-name: card_2_Left;
+            animation-name: card_2_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_2_Left {
+    100% {
+      left: calc(100% - 460px);
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Left {
+    100% {
+      left: calc(100% - 460px);
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  .useAnimation_card_2_Right {
+    -webkit-animation-name: card_2_Right;
+            animation-name: card_2_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_2_Right {
+    100% {
+      left: -82px;
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Right {
+    100% {
+      left: -82px;
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  .useAnimation_card_1_Right {
+    -webkit-animation-name: card_1_Right;
+            animation-name: card_1_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 482px;
+      height: 313.3px;
+    }
+  }
+  @keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 482px;
+      height: 313.3px;
+    }
+  }
+  .useAnimation_card_1_Left {
+    -webkit-animation-name: card_1_Left;
+            animation-name: card_1_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_1_Left {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes card_1_Left {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  .useAnimation_hidden2_Left {
+    -webkit-animation-name: hidden2_Left;
+            animation-name: hidden2_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes hidden2_Left {
+    100% {
+      left: calc(100% - 460px);
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  @keyframes hidden2_Left {
+    100% {
+      left: calc(100% - 460px);
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  .useAnimationLeftCard_3_Left {
+    -webkit-animation-name: Card_3_Left;
+            animation-name: Card_3_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  @keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  .useAnimationLeftCard_3_Right {
+    -webkit-animation-name: Card_3_Right;
+            animation-name: Card_3_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+}
+@media only screen and (max-width: 1504px) {
+  .left {
+    left: -150px;
+    bottom: 408px;
+  }
+  .right {
+    left: calc(100% - 390px);
+    bottom: 408px;
+  }
+  .center {
+    left: calc(50% - 310px);
+  }
+  .useAnimation_center_big_to_small {
+    -webkit-animation-name: center_big_to_small;
+            animation-name: center_big_to_small;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes center_big_to_small {
+    100% {
+      height: 185px;
+    }
+  }
+  @keyframes center_big_to_small {
+    100% {
+      height: 185px;
+    }
+  }
+  .useAnimation_LOrR_small_to_big {
+    -webkit-animation-name: LOrR_small_to_big;
+            animation-name: LOrR_small_to_big;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes LOrR_small_to_big {
+    100% {
+      height: 240px;
+    }
+  }
+  @keyframes LOrR_small_to_big {
+    100% {
+      height: 240px;
+    }
+  }
+  .useAnimation_Hidden1_Left {
+    -webkit-animation-name: Hidden1_Left;
+            animation-name: Hidden1_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Hidden1_Left {
+    100% {
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  @keyframes Hidden1_Left {
+    100% {
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  .useAnimation_Hidden1_Right {
+    -webkit-animation-name: Hidden1_Right;
+            animation-name: Hidden1_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Hidden1_Right {
+    100% {
+      left: -150px;
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  @keyframes Hidden1_Right {
+    100% {
+      left: -150px;
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  .useAnimation_card_2_Left {
+    -webkit-animation-name: card_2_Left;
+            animation-name: card_2_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_2_Left {
+    100% {
+      left: calc(100% - 390px);
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Left {
+    100% {
+      left: calc(100% - 390px);
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  .useAnimation_card_2_Right {
+    -webkit-animation-name: card_2_Right;
+            animation-name: card_2_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_2_Right {
+    100% {
+      left: -150px;
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Right {
+    100% {
+      left: -150px;
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  .useAnimation_card_1_Right {
+    -webkit-animation-name: card_1_Right;
+            animation-name: card_1_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 482px;
+      height: 313.3px;
+    }
+  }
+  @keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 482px;
+      height: 313.3px;
+    }
+  }
+  .useAnimation_card_1_Left {
+    -webkit-animation-name: card_1_Left;
+            animation-name: card_1_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_1_Left {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes card_1_Left {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  .useAnimation_hidden2_Left {
+    -webkit-animation-name: hidden2_Left;
+            animation-name: hidden2_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes hidden2_Left {
+    100% {
+      left: calc(100% - 390px);
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  @keyframes hidden2_Left {
+    100% {
+      left: calc(100% - 390px);
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  .useAnimationLeftCard_3_Left {
+    -webkit-animation-name: Card_3_Left;
+            animation-name: Card_3_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  @keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  .useAnimationLeftCard_3_Right {
+    -webkit-animation-name: Card_3_Right;
+            animation-name: Card_3_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+}
+@media only screen and (max-width: 1370px) {
+  .left {
+    left: -215px;
+    bottom: 408px;
+  }
+  .right {
+    left: calc(100% - 328px);
+    bottom: 408px;
+  }
+  .center {
+    left: calc(50% - 310px);
+  }
+  .useAnimation_center_big_to_small {
+    -webkit-animation-name: center_big_to_small;
+            animation-name: center_big_to_small;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes center_big_to_small {
+    100% {
+      height: 185px;
+    }
+  }
+  @keyframes center_big_to_small {
+    100% {
+      height: 185px;
+    }
+  }
+  .useAnimation_LOrR_small_to_big {
+    -webkit-animation-name: LOrR_small_to_big;
+            animation-name: LOrR_small_to_big;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes LOrR_small_to_big {
+    100% {
+      height: 240px;
+    }
+  }
+  @keyframes LOrR_small_to_big {
+    100% {
+      height: 240px;
+    }
+  }
+  .useAnimation_Hidden1_Left {
+    -webkit-animation-name: Hidden1_Left;
+            animation-name: Hidden1_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Hidden1_Left {
+    100% {
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  @keyframes Hidden1_Left {
+    100% {
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  .useAnimation_Hidden1_Right {
+    -webkit-animation-name: Hidden1_Right;
+            animation-name: Hidden1_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Hidden1_Right {
+    100% {
+      left: -215px;
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  @keyframes Hidden1_Right {
+    100% {
+      left: -215px;
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  .useAnimation_card_2_Left {
+    -webkit-animation-name: card_2_Left;
+            animation-name: card_2_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_2_Left {
+    100% {
+      left: calc(100% - 328px);
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Left {
+    100% {
+      left: calc(100% - 328px);
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  .useAnimation_card_2_Right {
+    -webkit-animation-name: card_2_Right;
+            animation-name: card_2_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_2_Right {
+    100% {
+      left: -215px;
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Right {
+    100% {
+      left: -215px;
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  .useAnimation_card_1_Right {
+    -webkit-animation-name: card_1_Right;
+            animation-name: card_1_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 482px;
+      height: 313.3px;
+    }
+  }
+  @keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 482px;
+      height: 313.3px;
+    }
+  }
+  .useAnimation_card_1_Left {
+    -webkit-animation-name: card_1_Left;
+            animation-name: card_1_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_1_Left {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes card_1_Left {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  .useAnimation_hidden2_Left {
+    -webkit-animation-name: hidden2_Left;
+            animation-name: hidden2_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes hidden2_Left {
+    100% {
+      left: calc(100% - 328px);
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  @keyframes hidden2_Left {
+    100% {
+      left: calc(100% - 328px);
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  .useAnimationLeftCard_3_Left {
+    -webkit-animation-name: Card_3_Left;
+            animation-name: Card_3_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  @keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  .useAnimationLeftCard_3_Right {
+    -webkit-animation-name: Card_3_Right;
+            animation-name: Card_3_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .left {
+    left: -270px;
+    bottom: 408px;
+  }
+  .right {
+    left: calc(100% - 272px);
+    bottom: 408px;
+  }
+  .center {
+    left: calc(50% - 310px);
+  }
+  .useAnimation_center_big_to_small {
+    -webkit-animation-name: center_big_to_small;
+            animation-name: center_big_to_small;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes center_big_to_small {
+    100% {
+      height: 185px;
+    }
+  }
+  @keyframes center_big_to_small {
+    100% {
+      height: 185px;
+    }
+  }
+  .useAnimation_LOrR_small_to_big {
+    -webkit-animation-name: LOrR_small_to_big;
+            animation-name: LOrR_small_to_big;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes LOrR_small_to_big {
+    100% {
+      height: 240px;
+    }
+  }
+  @keyframes LOrR_small_to_big {
+    100% {
+      height: 240px;
+    }
+  }
+  .useAnimation_Hidden1_Left {
+    -webkit-animation-name: Hidden1_Left;
+            animation-name: Hidden1_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Hidden1_Left {
+    100% {
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  @keyframes Hidden1_Left {
+    100% {
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  .useAnimation_Hidden1_Right {
+    -webkit-animation-name: Hidden1_Right;
+            animation-name: Hidden1_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Hidden1_Right {
+    100% {
+      left: -270px;
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  @keyframes Hidden1_Right {
+    100% {
+      left: -270px;
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  .useAnimation_card_2_Left {
+    -webkit-animation-name: card_2_Left;
+            animation-name: card_2_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_2_Left {
+    100% {
+      left: calc(100% - 272px);
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Left {
+    100% {
+      left: calc(100% - 272px);
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  .useAnimation_card_2_Right {
+    -webkit-animation-name: card_2_Right;
+            animation-name: card_2_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_2_Right {
+    100% {
+      left: -270px;
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Right {
+    100% {
+      left: -270px;
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  .useAnimation_card_1_Right {
+    -webkit-animation-name: card_1_Right;
+            animation-name: card_1_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 482px;
+      height: 313.3px;
+    }
+  }
+  @keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 482px;
+      height: 313.3px;
+    }
+  }
+  .useAnimation_card_1_Left {
+    -webkit-animation-name: card_1_Left;
+            animation-name: card_1_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_1_Left {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes card_1_Left {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  .useAnimation_hidden2_Left {
+    -webkit-animation-name: hidden2_Left;
+            animation-name: hidden2_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes hidden2_Left {
+    100% {
+      left: calc(100% - 272px);
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  @keyframes hidden2_Left {
+    100% {
+      left: calc(100% - 272px);
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  .useAnimationLeftCard_3_Left {
+    -webkit-animation-name: Card_3_Left;
+            animation-name: Card_3_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  @keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  .useAnimationLeftCard_3_Right {
+    -webkit-animation-name: Card_3_Right;
+            animation-name: Card_3_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+}
+@media only screen and (max-width: 1115px) {
+  .left {
+    left: -337px;
+    bottom: 408px;
+  }
+  .right {
+    left: calc(100% - 205px);
+    bottom: 408px;
+  }
+  .center {
+    left: calc(50% - 310px);
+  }
+  .useAnimation_center_big_to_small {
+    -webkit-animation-name: center_big_to_small;
+            animation-name: center_big_to_small;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes center_big_to_small {
+    100% {
+      height: 185px;
+    }
+  }
+  @keyframes center_big_to_small {
+    100% {
+      height: 185px;
+    }
+  }
+  .useAnimation_LOrR_small_to_big {
+    -webkit-animation-name: LOrR_small_to_big;
+            animation-name: LOrR_small_to_big;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes LOrR_small_to_big {
+    100% {
+      height: 240px;
+    }
+  }
+  @keyframes LOrR_small_to_big {
+    100% {
+      height: 240px;
+    }
+  }
+  .useAnimation_Hidden1_Left {
+    -webkit-animation-name: Hidden1_Left;
+            animation-name: Hidden1_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Hidden1_Left {
+    100% {
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  @keyframes Hidden1_Left {
+    100% {
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  .useAnimation_Hidden1_Right {
+    -webkit-animation-name: Hidden1_Right;
+            animation-name: Hidden1_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Hidden1_Right {
+    100% {
+      left: -337px;
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  @keyframes Hidden1_Right {
+    100% {
+      left: -337px;
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  .useAnimation_card_2_Left {
+    -webkit-animation-name: card_2_Left;
+            animation-name: card_2_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_2_Left {
+    100% {
+      left: calc(100% - 205px);
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Left {
+    100% {
+      left: calc(100% - 205px);
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  .useAnimation_card_2_Right {
+    -webkit-animation-name: card_2_Right;
+            animation-name: card_2_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_2_Right {
+    100% {
+      left: -337px;
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Right {
+    100% {
+      left: -337px;
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  .useAnimation_card_1_Right {
+    -webkit-animation-name: card_1_Right;
+            animation-name: card_1_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 482px;
+      height: 313.3px;
+    }
+  }
+  @keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 482px;
+      height: 313.3px;
+    }
+  }
+  .useAnimation_card_1_Left {
+    -webkit-animation-name: card_1_Left;
+            animation-name: card_1_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_1_Left {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes card_1_Left {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  .useAnimation_hidden2_Left {
+    -webkit-animation-name: hidden2_Left;
+            animation-name: hidden2_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes hidden2_Left {
+    100% {
+      left: calc(100% - 205px);
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  @keyframes hidden2_Left {
+    100% {
+      left: calc(100% - 205px);
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  .useAnimationLeftCard_3_Left {
+    -webkit-animation-name: Card_3_Left;
+            animation-name: Card_3_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  @keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  .useAnimationLeftCard_3_Right {
+    -webkit-animation-name: Card_3_Right;
+            animation-name: Card_3_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .left {
+    left: -392px;
+    bottom: 408px;
+  }
+  .right {
+    left: calc(100% - 146px);
+    bottom: 408px;
+  }
+  .center {
+    left: calc(50% - 310px);
+  }
+  .useAnimation_center_big_to_small {
+    -webkit-animation-name: center_big_to_small;
+            animation-name: center_big_to_small;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes center_big_to_small {
+    100% {
+      height: 185px;
+    }
+  }
+  @keyframes center_big_to_small {
+    100% {
+      height: 185px;
+    }
+  }
+  .useAnimation_LOrR_small_to_big {
+    -webkit-animation-name: LOrR_small_to_big;
+            animation-name: LOrR_small_to_big;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes LOrR_small_to_big {
+    100% {
+      height: 240px;
+    }
+  }
+  @keyframes LOrR_small_to_big {
+    100% {
+      height: 240px;
+    }
+  }
+  .useAnimation_Hidden1_Left {
+    -webkit-animation-name: Hidden1_Left;
+            animation-name: Hidden1_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Hidden1_Left {
+    100% {
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  @keyframes Hidden1_Left {
+    100% {
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  .useAnimation_Hidden1_Right {
+    -webkit-animation-name: Hidden1_Right;
+            animation-name: Hidden1_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Hidden1_Right {
+    100% {
+      left: -392px;
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  @keyframes Hidden1_Right {
+    100% {
+      left: -392px;
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  .useAnimation_card_2_Left {
+    -webkit-animation-name: card_2_Left;
+            animation-name: card_2_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_2_Left {
+    100% {
+      left: calc(100% - 146px);
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Left {
+    100% {
+      left: calc(100% - 146px);
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  .useAnimation_card_2_Right {
+    -webkit-animation-name: card_2_Right;
+            animation-name: card_2_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_2_Right {
+    100% {
+      left: -392px;
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Right {
+    100% {
+      left: -392px;
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  .useAnimation_card_1_Right {
+    -webkit-animation-name: card_1_Right;
+            animation-name: card_1_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 482px;
+      height: 313.3px;
+    }
+  }
+  @keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 482px;
+      height: 313.3px;
+    }
+  }
+  .useAnimation_card_1_Left {
+    -webkit-animation-name: card_1_Left;
+            animation-name: card_1_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_1_Left {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes card_1_Left {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  .useAnimation_hidden2_Left {
+    -webkit-animation-name: hidden2_Left;
+            animation-name: hidden2_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes hidden2_Left {
+    100% {
+      left: calc(100% - 146px);
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  @keyframes hidden2_Left {
+    100% {
+      left: calc(100% - 146px);
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  .useAnimationLeftCard_3_Left {
+    -webkit-animation-name: Card_3_Left;
+            animation-name: Card_3_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  @keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  .useAnimationLeftCard_3_Right {
+    -webkit-animation-name: Card_3_Right;
+            animation-name: Card_3_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+}
+@media only screen and (max-width: 885px) {
+  .left {
+    left: -408px;
+    bottom: 408px;
+  }
+  .right {
+    left: calc(100% - 109px);
+    bottom: 408px;
+  }
+  .center {
+    left: calc(50% - 310px);
+  }
+  .useAnimation_center_big_to_small {
+    -webkit-animation-name: center_big_to_small;
+            animation-name: center_big_to_small;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes center_big_to_small {
+    100% {
+      height: 185px;
+    }
+  }
+  @keyframes center_big_to_small {
+    100% {
+      height: 185px;
+    }
+  }
+  .useAnimation_LOrR_small_to_big {
+    -webkit-animation-name: LOrR_small_to_big;
+            animation-name: LOrR_small_to_big;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes LOrR_small_to_big {
+    100% {
+      height: 240px;
+    }
+  }
+  @keyframes LOrR_small_to_big {
+    100% {
+      height: 240px;
+    }
+  }
+  .useAnimation_Hidden1_Left {
+    -webkit-animation-name: Hidden1_Left;
+            animation-name: Hidden1_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Hidden1_Left {
+    100% {
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  @keyframes Hidden1_Left {
+    100% {
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  .useAnimation_Hidden1_Right {
+    -webkit-animation-name: Hidden1_Right;
+            animation-name: Hidden1_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Hidden1_Right {
+    100% {
+      left: -408px;
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  @keyframes Hidden1_Right {
+    100% {
+      left: -408px;
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  .useAnimation_card_2_Left {
+    -webkit-animation-name: card_2_Left;
+            animation-name: card_2_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_2_Left {
+    100% {
+      left: calc(100% - 109px);
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Left {
+    100% {
+      left: calc(100% - 109px);
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  .useAnimation_card_2_Right {
+    -webkit-animation-name: card_2_Right;
+            animation-name: card_2_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_2_Right {
+    100% {
+      left: -408px;
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Right {
+    100% {
+      left: -408px;
+      width: 482px;
+      height: 303.66px;
+      bottom: -28px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  .useAnimation_card_1_Right {
+    -webkit-animation-name: card_1_Right;
+            animation-name: card_1_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 482px;
+      height: 313.3px;
+    }
+  }
+  @keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 482px;
+      height: 313.3px;
+    }
+  }
+  .useAnimation_card_1_Left {
+    -webkit-animation-name: card_1_Left;
+            animation-name: card_1_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes card_1_Left {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes card_1_Left {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  .useAnimation_hidden2_Left {
+    -webkit-animation-name: hidden2_Left;
+            animation-name: hidden2_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes hidden2_Left {
+    100% {
+      left: calc(100% - 109px);
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  @keyframes hidden2_Left {
+    100% {
+      left: calc(100% - 109px);
+      width: 482px;
+      height: 303.66px;
+      opacity: 1;
+    }
+  }
+  .useAnimationLeftCard_3_Left {
+    -webkit-animation-name: Card_3_Left;
+            animation-name: Card_3_Left;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  @keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 482px;
+      height: 313.3px;
+      opacity: 0;
+    }
+  }
+  .useAnimationLeftCard_3_Right {
+    -webkit-animation-name: Card_3_Right;
+            animation-name: Card_3_Right;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 310px);
+      width: 560px;
+      height: 364px;
+      bottom: 376px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+  #caroMosab {
+    height: 390px;
+  }
+  html body {
+    min-width: 360px;
+  }
+  .container {
+    margin-top: 0;
+  }
+  #hidden1 {
+    left: -170%;
+    opacity: 0;
+    bottom: 260px;
+  }
+  #hidden2 {
+    left: 170%;
+    opacity: 0;
+    bottom: 260px;
+  }
+  .center {
+    left: calc(50% - 125.5px);
+    bottom: 12px;
+  }
+  .right {
+    left: calc(100% - 242px);
+    bottom: 260px;
+  }
+  .left {
+    left: 0px;
+    bottom: 260px;
+  }
+  .leftArrow {
+    position: absolute;
+    left: -171px;
+    bottom: 80px;
+    width: 20px;
+    height: 20px;
+  }
+  .rightArrow {
+    position: absolute;
+    left: 150px;
+    bottom: 80px;
+    width: 20px;
+    height: 20px;
+  }
+  .bodyContainer {
+    height: 491px;
+  }
+  .bigCard {
+    width: 195px;
+    height: 195px;
+    bottom: 13px;
+  }
+  .smallCard {
+    width: 185px;
+    height: 185px;
+  }
+  .smallWrap {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  .smallWrap .bigTitle {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 0;
+    color: #15B2B2;
+    padding: 5px;
+    width: 180px;
+    margin: auto;
+  }
+  .smallWrap .bigDesciption {
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
+    padding: 12px;
+    padding-top: 0;
+    width: 160px;
+    padding-right: 17px;
+    /* font-weight: bold; */
+  }
+  .smallWrap .smallTitle {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 0;
+    color: #15B2B2;
+    padding: 5px;
+    width: 180px;
+    margin: auto;
+  }
+  .smallWrap .smallDesciption {
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
+    padding: 12px;
+    padding-top: 0;
+    width: 160px;
+    /* font-weight: bold; */
+  }
+  #title {
+    font-size: 2.1rem;
+    text-align: center;
+    padding: 0;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 26px;
+  }
+  @-webkit-keyframes LOrR_small_to_big {
+    100% {
+      height: 240px;
+      padding-right: 17px;
+    }
+  }
+  @keyframes LOrR_small_to_big {
+    100% {
+      height: 240px;
+      padding-right: 17px;
+    }
+  }
+  @-webkit-keyframes center_big_to_small {
+    100% {
+      height: 185px;
+      padding-right: 12px;
+    }
+  }
+  @keyframes center_big_to_small {
+    100% {
+      height: 185px;
+      padding-right: 12px;
+    }
+  }
+  @-webkit-keyframes Hidden1_Left {
+    100% {
+      width: 185px;
+      height: 185px;
+      opacity: 0;
+    }
+  }
+  @keyframes Hidden1_Left {
+    100% {
+      width: 185px;
+      height: 185px;
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes Hidden1_Right {
+    100% {
+      left: 0px;
+      width: 185px;
+      height: 185px;
+      opacity: 1;
+      bottom: 260px;
+    }
+  }
+  @keyframes Hidden1_Right {
+    100% {
+      left: 0px;
+      width: 185px;
+      height: 185px;
+      opacity: 1;
+      bottom: 260px;
+    }
+  }
+  @-webkit-keyframes card_2_Left {
+    100% {
+      left: calc(100% - 242px);
+      width: 185px;
+      height: 185px;
+      display: block;
+      opacity: 0.9;
+      bottom: 14px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Left {
+    100% {
+      left: calc(100% - 242px);
+      width: 185px;
+      height: 185px;
+      display: block;
+      opacity: 0.9;
+      bottom: 14px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @-webkit-keyframes card_2_Right {
+    100% {
+      left: 0px;
+      width: 185px;
+      height: 185px;
+      opacity: 0.9;
+      bottom: 14px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Right {
+    100% {
+      left: 0px;
+      width: 185px;
+      height: 185px;
+      opacity: 0.9;
+      bottom: 14px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @-webkit-keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 185px;
+      height: 185px;
+    }
+  }
+  @keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 185px;
+      height: 185px;
+    }
+  }
+  @-webkit-keyframes card_1_Left {
+    100% {
+      left: calc(50% - 125.5px);
+      width: 195px;
+      height: 195px;
+      bottom: 249px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes card_1_Left {
+    100% {
+      left: calc(50% - 125.5px);
+      width: 195px;
+      height: 195px;
+      bottom: 249px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @-webkit-keyframes hidden2_Left {
+    100% {
+      display: block;
+      left: calc(100% - 242px);
+      width: 185px;
+      height: 185px;
+      opacity: 1;
+      bottom: 260px;
+    }
+  }
+  @keyframes hidden2_Left {
+    100% {
+      display: block;
+      left: calc(100% - 242px);
+      width: 185px;
+      height: 185px;
+      opacity: 1;
+      bottom: 260px;
+    }
+  }
+  @-webkit-keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 185px;
+      height: 185px;
+      opacity: 0;
+    }
+  }
+  @keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 185px;
+      height: 185px;
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 125.5px);
+      width: 195px;
+      height: 195px;
+      bottom: 249px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 125.5px);
+      width: 195px;
+      height: 195px;
+      bottom: 249px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+}
+@media only screen and (max-width: 690px) {
+  .container {
+    margin-top: 0;
+  }
+  #hidden1 {
+    left: -170%;
+    opacity: 0;
+    bottom: 260px;
+  }
+  #hidden2 {
+    left: 170%;
+    opacity: 0;
+    bottom: 260px;
+  }
+  .center {
+    left: calc(50% - 127px);
+    bottom: 12px;
+  }
+  .right {
+    left: calc(100% - 164px);
+    bottom: 260px;
+  }
+  .left {
+    left: -80px;
+    bottom: 260px;
+  }
+  @-webkit-keyframes Hidden1_Left {
+    100% {
+      width: 185px;
+      height: 185px;
+      opacity: 0;
+    }
+  }
+  @keyframes Hidden1_Left {
+    100% {
+      width: 185px;
+      height: 185px;
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes Hidden1_Right {
+    100% {
+      left: -80px;
+      width: 185px;
+      height: 185px;
+      opacity: 1;
+      bottom: 260px;
+    }
+  }
+  @keyframes Hidden1_Right {
+    100% {
+      left: -80px;
+      width: 185px;
+      height: 185px;
+      opacity: 1;
+      bottom: 260px;
+    }
+  }
+  @-webkit-keyframes card_2_Left {
+    100% {
+      left: calc(100% - 164px);
+      width: 185px;
+      height: 185px;
+      display: block;
+      opacity: 0.9;
+      bottom: 14px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Left {
+    100% {
+      left: calc(100% - 164px);
+      width: 185px;
+      height: 185px;
+      display: block;
+      opacity: 0.9;
+      bottom: 14px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @-webkit-keyframes card_2_Right {
+    100% {
+      left: -80px;
+      width: 185px;
+      height: 185px;
+      opacity: 0.9;
+      bottom: 14px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Right {
+    100% {
+      left: -80px;
+      width: 185px;
+      height: 185px;
+      opacity: 0.9;
+      bottom: 14px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @-webkit-keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 185px;
+      height: 185px;
+    }
+  }
+  @keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 185px;
+      height: 185px;
+    }
+  }
+  @-webkit-keyframes card_1_Left {
+    100% {
+      left: calc(50% - 127px);
+      width: 195px;
+      height: 195px;
+      bottom: 249px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes card_1_Left {
+    100% {
+      left: calc(50% - 127px);
+      width: 195px;
+      height: 195px;
+      bottom: 249px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @-webkit-keyframes hidden2_Left {
+    100% {
+      display: block;
+      left: calc(100% - 164px);
+      width: 185px;
+      height: 185px;
+      opacity: 1;
+      bottom: 260px;
+    }
+  }
+  @keyframes hidden2_Left {
+    100% {
+      display: block;
+      left: calc(100% - 164px);
+      width: 185px;
+      height: 185px;
+      opacity: 1;
+      bottom: 260px;
+    }
+  }
+  @-webkit-keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 185px;
+      height: 185px;
+      opacity: 0;
+    }
+  }
+  @keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 185px;
+      height: 185px;
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 127px);
+      width: 195px;
+      height: 195px;
+      bottom: 249px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 127px);
+      width: 195px;
+      height: 195px;
+      bottom: 249px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+}
+@media only screen and (max-width: 540px) {
+  html body {
+    min-width: 360px;
+  }
+  .container {
+    margin-top: 0;
+  }
+  #hidden1 {
+    left: -170%;
+    opacity: 0;
+    bottom: 260px;
+  }
+  #hidden2 {
+    left: 170%;
+    opacity: 0;
+    bottom: 260px;
+  }
+  .center {
+    left: calc(50% - 126px);
+    bottom: 12px;
+  }
+  .right {
+    left: calc(100% - 102px);
+    bottom: 260px;
+  }
+  .left {
+    left: -140px;
+    bottom: 260px;
+  }
+  .bodyContainer {
+    height: 491px;
+  }
+  .bigCard {
+    width: 195px;
+    height: 195px;
+    bottom: 13px;
+  }
+  .smallCard {
+    width: 185px;
+    height: 185px;
+  }
+  .smallWrap .bigTitle {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    color: #15B2B2;
+    padding: 5px;
+  }
+  .smallWrap .bigDesciption {
+    margin: 0;
+    text-align: center;
+    padding: 12px;
+    font-size: 1rem;
+    /* font-weight: bold; */
+  }
+  .smallWrap .smallTitle {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    color: #15B2B2;
+    padding: 5px;
+  }
+  .smallWrap .smallDesciption {
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
+    padding: 12px;
+    /* font-weight: bold; */
+  }
+  #title {
+    font-size: 2.1rem;
+    text-align: center;
+    padding: 0;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 26px;
+  }
+  @-webkit-keyframes Hidden1_Left {
+    100% {
+      width: 185px;
+      height: 185px;
+      opacity: 0;
+    }
+  }
+  @keyframes Hidden1_Left {
+    100% {
+      width: 185px;
+      height: 185px;
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes Hidden1_Right {
+    100% {
+      left: -140px;
+      width: 185px;
+      height: 185px;
+      opacity: 1;
+      bottom: 260px;
+    }
+  }
+  @keyframes Hidden1_Right {
+    100% {
+      left: -140px;
+      width: 185px;
+      height: 185px;
+      opacity: 1;
+      bottom: 260px;
+    }
+  }
+  @-webkit-keyframes card_2_Left {
+    100% {
+      left: calc(100% - 102px);
+      width: 185px;
+      height: 185px;
+      display: block;
+      opacity: 0.9;
+      bottom: 14px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Left {
+    100% {
+      left: calc(100% - 102px);
+      width: 185px;
+      height: 185px;
+      display: block;
+      opacity: 0.9;
+      bottom: 14px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @-webkit-keyframes card_2_Right {
+    100% {
+      left: -140px;
+      width: 185px;
+      height: 185px;
+      opacity: 0.9;
+      bottom: 14px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Right {
+    100% {
+      left: -140px;
+      width: 185px;
+      height: 185px;
+      opacity: 0.9;
+      bottom: 14px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @-webkit-keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 185px;
+      height: 185px;
+    }
+  }
+  @keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 185px;
+      height: 185px;
+    }
+  }
+  @-webkit-keyframes card_1_Left {
+    100% {
+      left: calc(50% - 126px);
+      width: 195px;
+      height: 195px;
+      bottom: 249px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes card_1_Left {
+    100% {
+      left: calc(50% - 126px);
+      width: 195px;
+      height: 195px;
+      bottom: 249px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @-webkit-keyframes hidden2_Left {
+    100% {
+      display: block;
+      left: calc(100% - 102px);
+      width: 185px;
+      height: 185px;
+      opacity: 1;
+      bottom: 260px;
+    }
+  }
+  @keyframes hidden2_Left {
+    100% {
+      display: block;
+      left: calc(100% - 102px);
+      width: 185px;
+      height: 185px;
+      opacity: 1;
+      bottom: 260px;
+    }
+  }
+  @-webkit-keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 185px;
+      height: 185px;
+      opacity: 0;
+    }
+  }
+  @keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 185px;
+      height: 185px;
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 126px);
+      width: 195px;
+      height: 195px;
+      bottom: 249px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 126px);
+      width: 195px;
+      height: 195px;
+      bottom: 249px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+}
+@media only screen and (max-width: 420px) {
+  html body {
+    min-width: 360px;
+  }
+  .container {
+    margin-top: 0;
+  }
+  #hidden1 {
+    left: -170%;
+    opacity: 0;
+    bottom: 260px;
+  }
+  #hidden2 {
+    left: 170%;
+    opacity: 0;
+    bottom: 260px;
+  }
+  .center {
+    left: calc(50% - 126px);
+    bottom: 12px;
+  }
+  .right {
+    left: calc(100% - 59px);
+    bottom: 260px;
+  }
+  .left {
+    left: -185px;
+    bottom: 260px;
+  }
+  .bodyContainer {
+    height: 491px;
+    min-width: 360px;
+  }
+  .bigCard {
+    width: 195px;
+    height: 195px;
+    bottom: 13px;
+  }
+  .smallCard {
+    width: 185px;
+    height: 185px;
+  }
+  .smallWrap .bigTitle {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    color: #15B2B2;
+    padding: 5px;
+  }
+  .smallWrap .bigDesciption {
+    margin: 0;
+    text-align: center;
+    padding: 12px;
+    font-size: 1rem;
+    /* font-weight: bold; */
+  }
+  .smallWrap .smallTitle {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    color: #15B2B2;
+    padding: 5px;
+  }
+  .smallWrap .smallDesciption {
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
+    padding: 12px;
+    /* font-weight: bold; */
+  }
+  #title {
+    font-size: 2.1rem;
+    text-align: center;
+    padding: 0;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 26px;
+  }
+  @-webkit-keyframes Hidden1_Left {
+    100% {
+      width: 185px;
+      height: 185px;
+      opacity: 0;
+    }
+  }
+  @keyframes Hidden1_Left {
+    100% {
+      width: 185px;
+      height: 185px;
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes Hidden1_Right {
+    100% {
+      left: -185px;
+      width: 185px;
+      height: 185px;
+      opacity: 1;
+      bottom: 260px;
+    }
+  }
+  @keyframes Hidden1_Right {
+    100% {
+      left: -185px;
+      width: 185px;
+      height: 185px;
+      opacity: 1;
+      bottom: 260px;
+    }
+  }
+  @-webkit-keyframes card_2_Left {
+    100% {
+      left: calc(100% - 59px);
+      width: 185px;
+      height: 185px;
+      display: block;
+      opacity: 0.9;
+      bottom: 14px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Left {
+    100% {
+      left: calc(100% - 59px);
+      width: 185px;
+      height: 185px;
+      display: block;
+      opacity: 0.9;
+      bottom: 14px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @-webkit-keyframes card_2_Right {
+    100% {
+      left: -185px;
+      width: 185px;
+      height: 185px;
+      opacity: 0.9;
+      bottom: 14px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes card_2_Right {
+    100% {
+      left: -185px;
+      width: 185px;
+      height: 185px;
+      opacity: 0.9;
+      bottom: 14px;
+      box-shadow: 6px 10px 9px -1px rgba(0, 0, 0, 0);
+    }
+  }
+  @-webkit-keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 185px;
+      height: 185px;
+    }
+  }
+  @keyframes card_1_Right {
+    100% {
+      left: -115%;
+      width: 185px;
+      height: 185px;
+    }
+  }
+  @-webkit-keyframes card_1_Left {
+    100% {
+      left: calc(50% - 126px);
+      width: 195px;
+      height: 195px;
+      bottom: 249px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes card_1_Left {
+    100% {
+      left: calc(50% - 126px);
+      width: 195px;
+      height: 195px;
+      bottom: 249px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @-webkit-keyframes hidden2_Left {
+    100% {
+      display: block;
+      left: calc(100% - 59px);
+      width: 185px;
+      height: 185px;
+      opacity: 1;
+      bottom: 260px;
+    }
+  }
+  @keyframes hidden2_Left {
+    100% {
+      display: block;
+      left: calc(100% - 59px);
+      width: 185px;
+      height: 185px;
+      opacity: 1;
+      bottom: 260px;
+    }
+  }
+  @-webkit-keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 185px;
+      height: 185px;
+      opacity: 0;
+    }
+  }
+  @keyframes Card_3_Left {
+    100% {
+      left: 135%;
+      width: 185px;
+      height: 185px;
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 126px);
+      width: 195px;
+      height: 195px;
+      bottom: 249px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+  @keyframes Card_3_Right {
+    100% {
+      left: calc(50% - 126px);
+      width: 195px;
+      height: 195px;
+      bottom: 249px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+  }
+}/*# sourceMappingURL=style.css.map */
