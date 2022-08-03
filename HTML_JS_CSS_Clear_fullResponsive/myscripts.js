@@ -1,49 +1,57 @@
 var arr = [{
   id: 1,
-  name: "שם הפרופיל - לורם איפסום",
-  description: " לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה סטום, לפריקך תצטריק לרטי."
+  name: "David",
+  description: "Perfect Website im really glad to use this website"
 },
 {
   id: 2,
-  name: "שם הפרופיל",
-  description: " לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה סטום, לפריקך תצטריק לרטי."
+  name: "justin asade",
+  description: "Wow its so easy to use and really helped me in all my work Thaaanks !"
 },
 {
   id: 3,
-  name: "שם הפרופיל - לורם ",
-  description: "1 לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליראס אגת לקטוס וואל אאוגו וסטיבולום סוליראס אגת לקטוס וואל אאוגו וסטיבולום סוליראס אגת לקטוס וואל אאוגו וסטיבולום סוליראס אגת לקטוס וואל אאוגו וסטיבולום סוליראס אגת לקטוס וואל אאוגו וסטיבולום סוליראס אגת לקטוס וואל אאוגו וסטיבולום סוליראס אגת לקטוס וואל אאוגו וסטיבולום סוליראס אגת לקטוס וואל אאוגו וסטיבולום סוליראס אגת לקטוס וואל אאוגו וסטיבולום סוליראס אגת לקטוס וואל אאוגו וסטיבולום סוליראס אגת לקטוס וואל אאוגו וסטיבולום סוליראס אגת לקטוס וואל אאוגו וסטיבולום סוליראס אגת לקטוס וואל אאוגו וסטיבולום סוליראס אגת לקטוס וואל אאוגו וסטיבולום סוליראס אגת לקטוס וואל אאוגו וסטיבולום סוליראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה סטום, לפריקך תצטריק לרטי.1"
+  name: "martin bark",
+  description: "i liked the tool because its really helped me in my things to be easier and thanks for all the staff here .i liked the tool because its really helped me in my things to be easier and thanks for all the staff here .i liked the tool because its really helped me in my things to be easier and thanks for all the staff here .i liked the tool because its really helped me in my things to be easier and thanks for all the staff here .i liked the tool because its really helped me in my things to be easier and thanks for all the staff here ."
 },
 ];
+
 var container = document.getElementById('bigContainer');
+var updateLeft = "ready";
+var sort = [0, 1, 2];
+var hidden = arr.length - 1;
 var touchstartX = 0;
 var touchendX = 0;
 
+
+//! touch functions
 function checkDirection() {
-if (touchendX < touchstartX && touchstartX - touchendX > 130)
-  moveBetweenThreeInArrayLoop('Right');
-if (touchendX > touchstartX && touchstartX - touchendX < -130)
-  moveBetweenThreeInArrayLoop('Left');
+    if(updateLeft === 'ready'){
+      if (touchendX < touchstartX && touchstartX - touchendX > 130)
+           moveBetweenThreeInArrayLoop('Right');
+      if (touchendX > touchstartX && touchstartX - touchendX < -130)
+           moveBetweenThreeInArrayLoop('Left');
+    }
 }
+
 container.addEventListener('touchstart', function(e) {
 touchstartX = e.changedTouches[0].screenX;
 });
+
 container.addEventListener('touchend', function(e) {
 touchendX = e.changedTouches[0].screenX;
 checkDirection();
 });
-var updateLeft = "ready";
-var sort = [0, 1, 2];
-var hidden = arr.length - 1;
+
+
 
 function updateData() {
 //* titles
 card1_title.textContent = arr[sort[0]].name;
-console.log(card2.children[0].children[1]);
 card2.children[0].children[0].textContent = arr[sort[1]].name;
 card3_title.textContent = arr[sort[2]].name;
-console.log(card3_title);
 cardhidden1_title.textContent = arr[hidden].name;
 cardhidden2_title.textContent = arr[hidden].name;
+
 //* descriptions
 card1_description.textContent = arr[sort[0]].description;
 card2_description.textContent = arr[sort[1]].description;
