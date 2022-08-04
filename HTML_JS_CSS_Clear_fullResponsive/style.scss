@@ -50,7 +50,7 @@
         bottom: 80px;
         width: 20px;
         height: 20px;
-        background-color: #34e89e;
+        background-color: #1b344c;
         padding: 5px;
         margin-right: 5px;
         border-radius: 5px;
@@ -60,7 +60,7 @@
         bottom: 80px;
         width: 20px;
         height: 20px;
-        background-color: #34e89e;
+        background-color: #1b344c;
         padding: 5px;
         margin-right: 5px;
         border-radius: 5px;
@@ -96,7 +96,7 @@
           .leftArrow {
             width: 35px;
             height: 35px;
-            background-color: #34e89e;
+            background-color: #1b344c;
             padding: 5px;
             margin-right: 5px;
             border-radius: 5px;
@@ -105,7 +105,7 @@
         .rightArrow {
             width: 35px;
             height: 35px;
-            background-color: #34e89e;
+            background-color: #1b344c;
             padding: 5px;
             margin-left: 5px;
             border-radius: 5px;
@@ -181,45 +181,37 @@
 }
 @media only screen and (max-width:690px) {
     :root{
-    --center: calc(50% - 127px);
-	--right:calc(100% - 164px);
-    --left:-80px;
-	--smallSize:185px;
-	--bigSize:195px;
-    } 
-}
-@media only screen and (max-width:540px) {
-    :root{
-    --center: calc(50% - 126px);
-	--right:calc(100% - 102px);
-    --left:-140px;
-	--smallSize:185px;
-	--bigSize:195px;
-    } 
-}
-@media only screen and (max-width:540px) {
-    :root{
-        --center: calc(50% - 138px);
-        --right: calc(100% - 139px);
-        --left: -129px;
+        --center: calc(50% - 127px);
+        --right: calc(100% - 193px);
+        --left: -50px;
         --smallSize: 185px;
         --bigSize: 195px;
     } 
 }
-@media only screen and (max-width:475px) {
+
+@media only screen and (max-width:590px) {
     :root{
-        --center: calc(50% - 138px);
-        --right: calc(100% - 114px);
-        --left: -154px;
+        --center: calc(50% - 127px);
+        --right: calc(100% - 143px);
+        --left: -100px;
         --smallSize: 185px;
         --bigSize: 195px;
     } 
 }
-@media only screen and (max-width:420px) {
+@media only screen and (max-width:495px) {
     :root{
-        --center: calc(50% - 127.5px);
-        --right: calc(100% - 60px);
-        --left: -184px;
+        --center: calc(50% - 127px);
+        --right: calc(100% - 111px);
+        --left: -133px;
+        --smallSize: 185px;
+        --bigSize: 195px;
+    } 
+}
+@media only screen and (max-width:425px) {
+    :root{
+        --center: calc(50% - 127px);
+        --right: calc(100% - 70px);
+        --left: -174px;
         --smallSize: 185px;
         --bigSize: 195px;
     } 
@@ -250,19 +242,19 @@ body{
 }
  
 .smallDesciption::-webkit-scrollbar-track,.bigDesciption::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgb(0, 0, 0);
+    -webkit-box-shadow: inset 0 0 6px white;
 }
 
 .smallDesciption::-webkit-scrollbar-thumb,.bigDesciption::-webkit-scrollbar-thumb {
-    background-color: rgb(255, 255, 255);
-    outline: 1px solid #34e89e;
+    background-color: #1b344c;
+    outline: 1px solid #f95335;
     border-radius: 15px;
 }
 
 .bodyContainer {
     direction: ltr;
     width: 100%;
-    background:linear-gradient(#34e89e,#0f3443,#0f3443);
+    background:#002028;
     overflow: hidden;
     position: relative;
 }
@@ -280,14 +272,14 @@ body{
     border-radius: 20px;
     cursor: pointer;
     box-shadow: 0px 3px 8px #0000001A;
-    background:linear-gradient(#0f3443,#34e89e);
+    background:#1b344c;
     overflow: hidden;
 }
 
 #title {
     text-align: center;
     font-weight: bold;
-    color: #0f3443;
+    color: #f95335;
 }
 
 .bigCard {
@@ -298,7 +290,7 @@ body{
     cursor: pointer;
     bottom: var(--bottom_C);
     box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
-    background: linear-gradient(#0f3443, #34e89e);
+    background: #1b344c;
     overflow: hidden;
 }
 
@@ -320,7 +312,7 @@ body{
     .bigTitle {
         font-size: var(--titleFontSize);
         margin: 0;
-        color: #34e89e;
+        color: #f95335;
         font-weight: bold;
         padding: 5px;
 
@@ -339,7 +331,7 @@ body{
     .smallTitle {
         font-size: var(--titleFontSize);
         margin: 0;
-        color: #34e89e;
+        color: #f95335;
         padding: 5px;
     }
     .smallDesciption {
